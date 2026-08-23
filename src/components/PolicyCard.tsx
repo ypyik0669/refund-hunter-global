@@ -1,8 +1,31 @@
 "use client";
 import { findPolicy } from "@/lib/refund-knowledge";
+import { useEffect, useState } from "react";
 
 export default function PolicyCard({ merchant }: { merchant: string }) {
-  const policy = findPolicy(merchant);
+  const local = findPolicy(merchant);
+  const [remote, setRemote] = useState<null | { policy: ReturnType<typeof findPolicy>; source: string; discovered?: boolean }>(null);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (local && local.markdown.length > 500) return; // 已有高质量本地库，不用拉
+    if (!merchant || merchant === "Unknown Merchant") return;
+    setLoading(true);
+    fetch(`/api/policy?merchant=${encodeURIComponent(merchant)}`)
+      .then((r) => r.json())
+      .then((d) => {
+        if (d.policy) setRemote(d);
+      })
+      .catch(() => {})
+      .finally(() => setLoading(false));
+  }, [merchant, local]);
+
+  const policy = local && local.markdown.length > 500 ? local : (remote?.policy as ReturnType<typeof findPolicy>) || local;
+
+  if (loading) {
+    return <div className="rounded-xl border bg-white dark:bg-zinc-900 p-4 text-sm">🔍 Searching refund policy for <b>{merchant}</b> — Jina+Exa+firecrawl live discovery...</div>;
+  }
+
   if (!policy) {
     return (
       <div className="rounded-xl border bg-amber-50 dark:bg-zinc-900 p-4 text-sm">
@@ -11,13 +34,14 @@ export default function PolicyCard({ merchant }: { merchant: string }) {
       </div>
     );
   }
+  const badge = remote?.discovered ? "LIVE DISCOVERED" : remote?.source === "generic" ? "GENERIC FALLBACK" : "CRAWLED";
   return (
     <div className="rounded-xl border bg-white dark:bg-zinc-900 p-4">
       <div className="flex items-center justify-between">
-        <h4 className="font-semibold text-sm">📄 {policy.merchant} — Crawled Policy</h4>
-        <span className="text-xs bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-2 py-1 rounded-full">{policy.category}</span>
+        <h4 className="font-semibold text-sm">📄 {policy.merchant} — {badge}</h4>
+        <span className="text-xs bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-2 py-1 rounded-full">{(policy as {category?:string}).category || "unknown"}</span>
       </div>
-      <p className="text-xs text-zinc-500 mt-1">Source: <a href={policy.url} target="_blank" className="underline">{policy.url}</a> • {policy.crawled_at.slice(0,10)} • {policy.engine}</p>
+      <p className="text-xs text-zinc-500 mt-1">Source: <a href={policy.url} target="_blank" className="underline">{policy.url}</a> • {(policy as {crawled_at?:string}).crawled_at?.slice(0,10) || "live"} • {policy.engine} {remote?.source ? `• via ${remote.source}` : ""}</p>
       <div className="mt-2 grid grid-cols-3 gap-2 text-xs">
         <div className="bg-emerald-50 dark:bg-emerald-950/30 rounded-lg p-2 text-center">
           <div className="font-bold text-emerald-700 dark:text-emerald-400">{policy.extracted.refund_days ?? "—"} days</div>
