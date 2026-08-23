@@ -20,22 +20,12 @@ export function parseOcrFromText(input: string, fileName?: string): OcrResult {
     else if (c.includes("¥") || c === "cny") currency = "CNY";
     else currency = "USD";
   }
-  // merchant
+  // merchant — 动态从知识库匹配（31家+可扩展到全网）
+  // 完整列表来自 crawler/merchants.json 与 refund-policies.json
   const merchants = [
-    "Netflix",
-    "Spotify",
-    "Adobe",
-    "ChatGPT",
-    "Notion",
-    "Zoom",
-    "YouTube Premium",
-    "Apple",
-    "Google",
-    "Amazon",
-    "Airbnb",
-    "Booking.com",
-    "Uber",
-    "Figma",
+    "Netflix","Spotify","YouTube Premium","Adobe","ChatGPT","Notion","Figma","Zoom","Dropbox","Microsoft 365","Canva","Slack",
+    "Apple App Store","Google Play","Steam","Amazon","eBay","AliExpress","Shopify","Booking.com","Airbnb","Expedia","Uber","Ryanair","PayPal","Patreon","Substack","Duolingo","Headspace","Strava","Linear",
+    "Apple","Google","Amazon",
   ];
   let merchant = "Unknown Merchant";
   for (const m of merchants) {

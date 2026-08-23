@@ -14,6 +14,7 @@ export default function Header() {
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">
           <Link href="/#how" className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white">How it works</Link>
+          <Link href="/policies" className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white">Policies (31)</Link>
           <Link href="/tools" className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white">Free Tools</Link>
           <Link href="/pricing" className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white">Pricing</Link>
           <Link href="/app" className="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-full font-medium transition">Start Hunting →</Link>

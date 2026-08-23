@@ -2,6 +2,7 @@
 import { RefundAnalysis } from "@/types/refund";
 import { generateTemplates } from "@/lib/templates";
 import { useState } from "react";
+import PolicyCard from "./PolicyCard";
 
 export default function ResultCard({ analysis, tpl }: { analysis: RefundAnalysis; tpl: ReturnType<typeof generateTemplates> }) {
   const [copied, setCopied] = useState<string | null>(null);
@@ -44,6 +45,9 @@ export default function ResultCard({ analysis, tpl }: { analysis: RefundAnalysis
           <span className="px-2 py-1 bg-amber-100 text-amber-800 rounded-full">{analysis.category}</span>
         </div>
       </div>
+
+      {/* Knowledge */}
+      <PolicyCard merchant={analysis.ocr.merchant} />
 
       {/* Templates */}
       <div className="grid md:grid-cols-2 gap-4">
