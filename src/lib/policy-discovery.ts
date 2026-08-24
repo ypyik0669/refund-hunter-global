@@ -1,5 +1,8 @@
 // 任意冷门商户实时发现 — 4框架思想的TS实现
 // Scrapling(启发式URL) + Agent-Reach(Jina/Exa) + crawl4ai(清洗) + firecrawl(兜底)
+// Universal: DDG免费搜索 → 全世界任意公司，无需白名单
+
+import { universalSearchRead } from "./universal-discovery";
 
 export interface DiscoveredPolicy {
   merchant: string;
@@ -15,11 +18,20 @@ export interface DiscoveredPolicy {
   };
 }
 
-// 启发式：冷门商户也大概率把政策放在这几个路径
+// 启发式：冷门商户也大概率把政策放在这几个路径（支持国家域 .com.my 等）
+const COUNTRY_TLD: Record<string, string> = { my: "com.my", sg: "com.sg", uk: "co.uk", au: "com.au", in: "co.in", ph: "ph", id: "co.id", th: "co.th", vn: "vn", hk: "com.hk", tw: "com.tw", jp: "co.jp", kr: "co.kr", de: "de", fr: "fr", es: "es", it: "it", br: "com.br", ca: "ca" };
+
 function candidateUrls(merchant: string, domainHint?: string): string[] {
-  const slug = merchant.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const raw = merchant.toLowerCase();
+  const tokens = raw.split(/\s+/);
+  const country = tokens.length > 1 && COUNTRY_TLD[tokens[tokens.length - 1]] ? tokens.pop()! : null;
+  const slug = tokens.join("").replace(/[^a-z0-9]/g, "");
+  const base = slug.replace(/^(grabmy|shopeemy|lazadamy)$/, (s) => s.replace(/my$/, "")); // 防呆
   const domains: string[] = [];
   if (domainHint && domainHint.includes(".")) domains.push(domainHint.replace(/^https?:\/\//, "").split("/")[0]);
+  if (country) {
+    domains.push(`${base}.${COUNTRY_TLD[country]}`, `help.${base}.${COUNTRY_TLD[country]}`, `${base}my.com`);
+  }
   domains.push(`${slug}.com`, `${slug}.io`, `${slug}.co`, `${slug}.app`, `help.${slug}.com`, `support.${slug}.com`);
   const uniq = [...new Set(domains)];
   const paths = ["/refund", "/refund-policy", "/refunds", "/terms", "/terms-of-service", "/legal/terms", "/help", "/support/refund", "/policies/refund", "/return"];
@@ -115,6 +127,24 @@ export async function discoverPolicy(merchant: string): Promise<DiscoveredPolicy
       }
     } catch {}
   }
+
+  // 2.5 Universal: DDG免费搜索（零Key，全世界任意公司）— 搜索优先于猜URL
+  try {
+    const found = await Promise.race([
+      universalSearchRead([`${m} refund policy`, `${m} refund policy cancellation terms`, /[\u4e00-\u9fff]/.test(m) ? `${m} 退款政策` : `${m} how to get refund`]),
+      new Promise<null>((r) => setTimeout(() => r(null), 10000)),
+    ]);
+    if (found && found.markdown.length > 400) {
+      return {
+        merchant: m,
+        url: found.url,
+        title: `${m} Policy (web search)`,
+        markdown: found.markdown.slice(0, 8000),
+        engine: "ddg+jina",
+        extracted: extractRefundFields(found.markdown),
+      };
+    }
+  } catch {}
 
   // 3. 启发式URL + Jina（对应Scrapling Spider思想，不依赖Key，最稳）— 并行+快速失败
   const urls = candidateUrls(m).slice(0, 4); // 冷门只试前4个，最快

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { findPolicy, isStale, getStaleDays } from "@/lib/refund-knowledge";
 import { discoverPolicy } from "@/lib/policy-discovery";
+import { getDynamic, setDynamic, dynamicStats } from "@/lib/policy-store";
 
 // 内存缓存（生产应换Supabase/Redis）
 const cache = new Map<string, { data: unknown; ts: number }>();
@@ -16,6 +17,14 @@ export async function GET(req: NextRequest) {
   const hit = cache.get(key);
   if (hit && Date.now() - hit.ts < TTL) {
     return NextResponse.json({ ...(hit.data as object), cached: true });
+  }
+
+  // 0. 自学习动态库（任意公司被发现过即命中，3天TTL）
+  const dyn = getDynamic(merchant);
+  if (dyn && dyn.markdown.length > 400) {
+    const data = { policy: dyn, source: `dynamic(${dyn.engine})`, discovered: false, stale: false };
+    cache.set(key, { data, ts: Date.now() });
+    return NextResponse.json(data);
   }
 
   // 1. 先查本地119家 — 但 stale 必须活验证，不可直接信
@@ -56,11 +65,21 @@ export async function GET(req: NextRequest) {
   try {
     const discovered = await Promise.race([
       discoverPolicy(merchant),
-      new Promise<null>((resolve) => setTimeout(() => resolve(null), 8000)),
+      new Promise<null>((resolve) => setTimeout(() => resolve(null), 15000)),
     ]);
     if (discovered && discovered.markdown && discovered.markdown.length > 200) {
       const data = { policy: discovered, source: discovered.engine, discovered: true };
       cache.set(key, { data, ts: Date.now() });
+      // 自学习：持久化到动态库，下次免爬
+      setDynamic({
+        merchant,
+        url: discovered.url,
+        title: discovered.title || merchant,
+        markdown: discovered.markdown,
+        engine: discovered.engine,
+        extracted: discovered.extracted,
+        crawled_at: new Date().toISOString(),
+      });
       return NextResponse.json(data);
     }
   } catch (e) {
@@ -77,7 +96,8 @@ export async function GET(req: NextRequest) {
     extracted: { refund_days: 7, refundable: true, conditions: ["generic", "goodwill"], contact: "" },
   };
   const data = { policy: fallback, source: "generic", discovered: false, note: "No crawled policy found, using generic. Add to merchants.json and re-crawl for precision." };
-  cache.set(key, { data, ts: Date.now() });
+  // generic 只缓存60秒，避免失败结果被长期记住
+  cache.set(key, { data, ts: Date.now() - TTL + 60_000 });
   return NextResponse.json(data);
 }
 
