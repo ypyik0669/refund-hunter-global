@@ -25,22 +25,6 @@ Patreon is a platform that helps connect fans with creators they love. Our missi
 Archive of Prior Terms
 TOPICS
 TOPICS
-Welcome to Patreon!
-Your account
-Abusive conduct
-All about being a creator
-All about being a fan
-Community rules
-Account deletion
-License to your creations
-Third-party apps and services
-Patreon's creations
-Indemnity
-Warranty disclaimer
-Limitation of liability
-Dispute resolution
-Changes to these Terms
-Everything else
 Back to Policy
 Welcome to Patreon!
 To summarize: By using Patreon, you agree to these Terms.
@@ -128,4 +112,4 @@ If a member pays in a currency that is different from the currency associated wi
 Even if a member pays in the same currency as the currency associated with their payment instrument, when a member’s payment is processed in a country different from the one associated with their payment instrument, then the financial institution associated with that payment instrument may charge them a foreign transaction fee for that payment. We are not applying this fee, have no knowledge of whether the fee is applied, and do not receive any of the funds from that fee, but our choices about payment processing may impact or otherwise give rise to this fee.
 Tax
 In order to satisfy our tax obligations, we collect tax identification information and, in certain circumstances, report this information and earnings to tax authorities as legally required. For example, if you are located in the United States or are a United States citizen who has earnings reaching certain thresholds, Patreon is required to issue you a Form 1099-K at year end. Furthermore, Patreon may be obligated to report certain information to jurisdictions outside of the United States. You must  provide accurate and current tax identification and status information where appropriate, and update said information in the event of a change. If you fail to provide such information, or if it is incomplete or inaccurate, Patreon may withhold taxes from payments to you as required by applicable law. Any amounts withheld and remitted to the relevant tax authority will be treated as having been paid to you, and you will not be entitled to any additional payment in respect of such withholding.
-To the extent required by any applicable law, as determined by Patreon in its sole discretion, Patreon may deduct and withhold taxes, duties, charges, or assessments from any payment made unde
+To the extent required by any applicable law, as determined by Patreon in its sole discretion, Patreon may deduct and withhold taxes, duties, charges, or assessments from any payment made under or in connection with our services and will pay you the amount due after such deduction or withholding. If deductions or withholdings of tax have been made, Patreon will pay the withheld tax to the appropriate tax authority and provide copies of receipts for such withholding tax to you. You must provide evidence of

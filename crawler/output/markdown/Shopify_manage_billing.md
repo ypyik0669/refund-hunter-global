@@ -6,8 +6,6 @@ Shopify Help Center | Managing your Shopify billing
 Help
 Log in
 Contents
-Home
-Your account
 Managing your Shopify billing
 From the
 Billing
@@ -44,4 +42,3 @@ Learn what charges continue, what gets refunded, and how to avoid surprise bills
 Shopify offers and promotions
 Check if you qualify for current discounts or credits on your Shopify subscription.
 Leave feedback
-Chat with a human

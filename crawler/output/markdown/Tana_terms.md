@@ -1,0 +1,75 @@
+# Tana
+
+Source: https://tana.inc/terms
+
+Log in
+Download
+Terms and Conditions, Tana Labs Inc.
+Last updated: May 18, 2026
+Please read these terms and conditions (the “Terms”) carefully before accessing or using the Tana service via
+tana.inc
+or through a separate application installed on a device (for example via desktop or your smartphone) or in connection with other websites or services (for example when embedding content hosted on Tana in other websites) (together, or individually, the “Service”) operated and provided to you by Tana Labs, Inc.
+The Terms constitute a binding legal agreement between you as a customer and user of the Service (“you”) and Tana Labs, Inc., a Delaware corporation with registered offices at 470 Ramona Street, Palo Alto, CA 94301 (below referred to as “Tana”, “we”, or “us”).
+If you have any questions regarding these Terms, please find our contact details below in section 25,
+“Contact Details”
+.
+Individual consumers, please note:
+section 20.2.1 (arbitration agreement) contains provisions that govern how to resolve disputes between you and Tana. Among other things, section 20.2.1 (arbitration agreement) includes an agreement to arbitrate which requires, with limited exceptions, that all disputes between you and us shall be resolved by binding and final arbitration. Section 20.2.1 also contains a class action and jury trial waiver. Please read section 20.2.1 (arbitration agreement) carefully.
+Unless you opt out of the arbitration agreement (as defined in section 20.2.1) within thirty (30) days in accordance with section 20.2.11 (30-day right to opt out): (1) you will only be permitted to pursue disputes or claims and seek relief against us on an individual basis, not as a plaintiff or class member in any class or representative action or proceeding, and you waive your right to participate in a class action lawsuit or class-wide arbitration; and (2) you are waiving your right to pursue disputes or claims and seek relief in a court of law and to have a jury trial.
+1. Acceptance
+BY CLICKING “ACCEPT” OR BY ACCESSING AND USING THE SERVICE, YOU AGREE TO BE LEGALLY BOUND BY THESE TERMS. Please note that your access to and use of the service is conditioned upon your acceptance and continued compliance with the terms.
+These Terms apply to any use of the Service, whether in connection with a paid or unpaid subscription.
+If you disagree with or breach any part of the Terms, then you do not have the right to access or use the Service. AS FURTHER STATED BELOW IN THESE TERMS, WE RESERVE THE RIGHT TO TEMPORARILY OR PERMANENTLY PAUSE OR STOP YOUR ACCESS TO THE SERVICE IF YOU DO NOT COMPLY WITH THESE TERMS.
+If you are accessing or using the Service on behalf of a business or entity, then your business or entity is legally and financially responsible for your access to and use of the Service as well as for the use of your account by others affiliated with your entity, including any employees, agents or contractors.
+2. Access to the Service and required hardware
+The Service is offered as a software-as-a-service meaning that software and functionality are provided to you as a service and not as permanent licensed software through your web browser or downloadable applications (such as a desktop or mobile application) (each an “App”).
+2.1. Limited right to access and use the Service
+Tana grants to you, for the duration of these Terms, a revocable, non-transferable, non-sublicensable, non-exclusive and limited right to access and use the Service, as made available by Tana from time to time, strictly in accordance with these Terms, solely for your internal purposes and subject to timely payments of any fees hereunder. You acknowledge and agree that your right to access and use the Service is not tied to any particular version or function at any given time.
+2.2. Limited end user license to our App
+If you access and use the Service through an App, Tana hereby grants you, for the duration of these Terms, a revocable, non-transferable, non-sublicensable, non-exclusive, and limited right to install the relevant App on a single device owned and controlled by you and to access and use the Service on the device through the relevant App strictly in accordance with these Terms and the license granted to you under section 2.1 above as well as subject to timely payments of any fees due hereunder.
+2.3. You must provide the required hardware to access and use the Service
+You are responsible for having internet connection and all other required software, hardware or equipment to access and use the Services. We cannot guarantee that the Service can be accessed and used on any specific device or software. Nor do we guarantee that the Service will be available in any particular geographic location.
+We strive to keep our Service available as much as possible, but we do not guarantee that the Service will always be accessible as it is delivered throughout the internet.
+3. Account registration and warranties
+To access and use the Service you must register as a user and create an account with us. To register an account, access and use the Service, you must provide us with certain personal data. For information regarding how we process your personal data, please see our
+privacy policy
+.
+To register an account and access the Service, you must be at least thirteen years old or older. The Service is not intended for children under the age of thirteen. If you are at least thirteen years old, but under eighteen years of age, you may need — dependent on the laws in your country — parental consent to enter into these Terms, create and account, access and use the Service and any actions you take within the Service will be the legal responsibility of the parents or guardians. Any registration, access or use by anyone under thirteen years, or anyone who is under eighteen years old and acting without parental consent in a country where this is required, is unauthorized, unlicensed and in breach of these Terms.
+By registering an account, you acknowledge and agree that you will: (a) provide true, accurate, current, and complete information as requested when registering an account and (b) maintain and update this registration information to keep it true, accurate, current, and complete. You represent and warrant that (i) you are not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a “terrorist supporting” country; and that (ii) you are not listed on any U.S. Government list of prohibited or restricted parties.
+You are solely responsible for maintaining the confidentiality of your account and password and for restricting access to any device that you use for accessing the Service. You hereby accept sole responsibility for all activities that occur under your account or password.
+4. Subscriptions, free trials and applicable fees
+4.1. Free version and subscriptions
+Some parts of the Service may be, in Tana’s sole discretion, made available on a paid subscription basis (“Subscription”). You will be billed in advance on a monthly or yearly recurring and periodic basis (“Billing Cycle”). At the end of each Billing Cycle, your Subscription will automatically renew and your payment method for such Subscription will automatically be charged at the start of each new Subscription period for the fees and taxes applicable to that Billing Cycle, unless you cancel your Subscription prior to renewal. You may cancel your Subscription at any time. However, you will not receive a refund for the fees you already paid for your current Subscription period and you will be able to access the Service until the end of your current Subscription. Further, Tana may offer some, limited or restricted parts of the Service to You for free as a free version of the Service. Tana reserves the right to amend or change which parts or features of the Services are offered for free, provided that Tana offers You reasonable advance notice before any such changes. A free membership can be upgraded to a paid Subscription membership or a Free Trial.
+4.2. Free Trial
+Tana may, in its sole discretion, offer a Subscription as a free trial (“Free Trial”). You may terminate your Free Trial without any fees until the last day of your Free Trial. If you do not cancel your Free Trial, then you may choose to convert your Free Trial membership to a Free Membership or into a paid Subscription at the end of the trial period. At such a time, you will automatically be charged with the applicable Subscription fees for the type of Subscription you have selected.
+Tana may, at any time and without notice, modify the terms and conditions of any Free Trial offer, cancel any Free Trial offer or cancel any Free Trial subscription at any time.
+4.3. Fees and Fee changes
+For a list of our current fees and subscription fees, we refer you to our pricing page (“Fees”).
+We reserve the right to change or modify the applicable Fees, at any time and in our sole discretion (a “Fee Change”). The Fee Change will become effective at the end of the then-current Billing Cycle. If there are no active Billing Cycles, the Fee Change will become effective from the date announced by Tana. You will be notified of any Fee Changes a reasonable time in advance before the Fee Change comes into effect. Your continued use of the Service after the Fee Change comes into effect constitutes your acceptance of and agreement to pay the new Fees.
+5. Payment terms and refunds
+5.1. Payment terms
+You have a duty to fully pay for all products and services ordered. You are responsible for providing Tana with valid credit card information to secure payment. We reserve the right to cancel any order if the credit card information you provide is not valid. Payment may be processed in cooperation with third party payment providers.
+You authorize Tana to automatically charge your credit card the agreed Fees in accordance with the payment terms. You are responsible for paying all applicable taxes (including those Tana is not required to collect) and for all hardware, software, Internet and other costs you incur to access the Service.
+6. Content and User Content
+6.1. Definition of “Content” and “User Content”
+As used within these Terms:
+“Content” means information, text, documents, files, graphics, images, music, software, audio, video, works of authorship of any kind, and information or other materials that are posted, submitted, entered, uploaded, generated, provided or otherwise made available through the Service; and
+“User Content” means any Content entered, uploaded, submitted or otherwise provided to the Service by or on behalf of you or other individuals and any content which is provided to the Service at your request or instigation (for example, but not limited to, by other users or non-users via a survey or poll).
+6.2. You are responsible for your User Content
+We do not claim ownership of any User Content and nothing in these Terms will be deemed to restrict any rights that you may have to use or exploit your User Content. You are solely responsible for all your User Content.
+In light of the above, you represent and warrant: (a) that you have all the necessary rights in and to the User Content to grant us the license granted in section 4.3 below; (b) that neither your User Content nor your use or provision thereof infringes any intellectual property rights, or other rights, of a third party; (c) that your User Content will not contain viruses or other harmful or malicious code; and (d) that your User Content, each individually or the total sum thereof, will not affect the stability of or access to the Service.
+TANA ACCEPTS NO RESPONSIBILITY OR LIABILITY FOR ANY USER CONTENT, TO THE MAXIMUM EXTENT PERMISSIBLE BY APPLICABLE LAW. YOU ARE SOLELY LIABLE FOR YOUR USER CONTENT AND WILL INDEMNIFY AND HOLD HARMLESS TANA FOR ANY COSTS, EXPENSES OR DAMAGES RELATING TO YOUR USER CONTENT IN ACCORDANCE WITH SECTION 16 BELOW.
+6.3. Rights to User Content granted to Tana by you
+In order for the Service to function properly and to enable us to provide you the Service, you grant Tana, by entering, uploading or making any User Content available through the Service, a non-exclusive, worldwide, royalty-free right to host, cache, store, reproduce, transmit and modify your User Content. This includes transfer to AI models for processing and augmentation as necessary to provide the Service to you. Tana does not use your User Content to train, improve, or develop AI or machine learning models, unless we notify you in advance and provide you with an opportunity to opt out. This restriction also applies contractually to our AI subprocessors. When using Tana’s publishing services, these rights also include publicly display, publish and distribute the User Content. Tana may sublicense the aforementioned rights solely for the purpose of hosting, maintaining and providing the Service.
+Your User Content may be shared with other users of the Service and others not part of the Service, but only after you have given us permission to do so.
+Other than the above license and otherwise set out in these Terms, as between Tana and you, you retain any and all of your rights to your User Content. Tana will not use your User Content for other purposes than stated herein without your prior consent to do so.
+6.4. Sharing User Content
+Your User Content can be “public” or “private”, depending on your choices. Any User Content you designate as “public” will be accessible by and available to other users of the Service and to non-registered viewers of certain sections of the Service. Accordingly, you agree and acknowledge that such users will have the right to view, comment on and tag your publicly designated User Content, as well as the rights to use, publish, display, modify or duplicate your User Content depending on what permissions you grant.
+You grant Tana all rights necessary to make any of your publicly designated User Content available to other users of the Service and to permit those users to engage in the activities described in this section 6.4 with respect to your publicly designated User Content.
+6.5. Download of User Content
+Through the Service you may generate and access a link via which you may access and download your User Content that is stored in the Service and connected to your account.
+7. Removal of User Content
+7.1. Your removal of your User Content
+You may remove User Content by deleting it or by removing it from your user area. You may also make your User Content hosted in your user area inaccessible.
+7.2. Tana’s right to remove Content and User Content
+We reserve the right to, at any time and without notice, remove, modify, access, make inaccessible, review or edit any Content including User Content that we deem, in our sole discretion, to breach: (a) any of the representations and warranties in section 4.2 above; (b) our copyright policy set out in section 8; (c) our code of conduct and restricted and prohibited uses set out in section 9; (d) app

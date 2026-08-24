@@ -3,11 +3,7 @@
 Source: https://www.microsoft.com/en-us/servicesagreement
 
 Microsoft Services Agreement
-This is the Trace Id: 816199957c3eee8c1e3f70bd1649e6b5
-Maximize your points with the Microsoft Rewards extension
-Quick access to your daily points and offers
-No thanks
-Add it now
+This is the Trace Id: 39cbfa6af5891e4595c92f7fb27e1bc8
 Skip to main content
 Microsoft
 Microsoft Services Agreement
@@ -86,17 +82,17 @@ Your Privacy
 Your Privacy.
 Your privacy is important to us. Please read the
 Microsoft Privacy Statement
-(https://go.microsoft.com/fwlink/?LinkId=521839) 
+(https://go.microsoft.com/fwlink/?LinkId=521839) 
 			(the "
 Privacy Statement
 ") as it describes the types of data we collect from you and your devices ("
 Data
-"), how we use your Data, and the legal bases we have to process your Data. The Privacy Statement also describes how Microsoft uses your content, 
-			which is your communications with others; postings submitted by you to Microsoft via the Services; and the files, photos, documents, audio, digital works, livestreams and videos that you upload,
+"), how we use your Data, and the legal bases we have to process your Data. The Privacy Statement also describes how Microsoft uses your content, 
+			which is your communications with others; postings submitted by you to Microsoft via the Services; and the files, photos, documents, audio, digital works, livestreams and videos that you upload,
 			store, broadcast, create, generate, or share through the Services or inputs that you submit in order to generate content ("
 Your Content
-"). Where processing is based on consent and to the extent permitted by law, 
-			by agreeing to these Terms, you consent to Microsoft’s collection, use and disclosure of Your Content and Data as described in the Privacy Statement. 
+"). Where processing is based on consent and to the extent permitted by law, 
+			by agreeing to these Terms, you consent to Microsoft’s collection, use and disclosure of Your Content and Data as described in the Privacy Statement. 
 			In some cases, we will provide separate notice and request your consent as referenced in the Privacy Statement.
 Your Content
 2.
@@ -165,4 +161,6 @@ Our
 Code of Conduct
 identifies what’s prohibited when using our Services. Our content and conduct policies can be found
 here
-(https://www.microsoft.com/DigitalSafety/policies). Specific Services h
+(https://www.microsoft.com/DigitalSafety/policies). Specific Services have additional policies and community standards applicable to their users, which are available
+here
+(https://www.micros

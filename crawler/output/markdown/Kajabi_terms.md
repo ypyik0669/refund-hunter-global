@@ -1,0 +1,76 @@
+# Kajabi
+
+Source: https://kajabi.com/policies/terms
+
+Terms of Service | Policy Center | Kajabi
+Login
+Start Free Trial
+Get Started — Save 50%
+Get Started — Save 50%
+Get Started — Save 50%
+Terms of Service
+Last Edit:
+May 5, 2026
+Thank you for choosing Kajabi!
+By creating an account or using our services, you agree to these Terms of Service (“Terms”).
+Our Services
+Kajabi provides an all-in-one digital commerce platform that empowers experts to transform their knowledge, experience, and expertise into thriving online businesses.  Our platform offers a single ecosystem to create, market, and sell digital products, including communities, online courses, newsletters, coaching, and more (collectively, the “Services”).  Any new features or tools we add will also fall under these Terms.  The latest version is always available at:
+https://legal.kajabi.com/policies/terms
+.
+Our Policies
+In addition to these Terms, you also agree to:
+Our Acceptable Use Policy (“AUP”):
+https://legal.kajabi.com/policies/aup
+Our Privacy Notice:
+https://legal.kajabi.com/policies/privacy
+Any other applicable policies (together with these Terms, our AUP, and our Privacy Notice, referred to as the “Policies”) available at:
+https://legal.kajabi.com/
+Our Definitions
+“Content” means anything you or your Customers create or make available through the Service in connection with your Account, including your intellectual property (e.g.  trademarks, trade names, service marks, and copyrighted works); the products or services you offer (e.g., courses, coaching, memberships, subscriptions, events, and digital downloads); text and media (e.g., images, graphics, emails, designs, photos, audio, podcasts, videos, livestreams, and other recordings); messages, comments, reviews, and other communications; and personal data about you, your Customers, leads, or other users; and any output generated and returned by any generative artificial intelligence service provided by Kajabi in response to a query from you.
+“Customers” means your end users (i.e.  customers, subscribers, students, trainees, etc.).
+“Hero,” or “you” means either: you, as an individual, or the entity you represent (if you are signing up or using the Services on behalf of a business) and any of its affiliates.
+“Kajabi,” “we,” “us,” or “our” means Kajabi, LLC, Kajabi Financial, LLC, and our affiliates.
+“Party” or “Parties” mean both of us.
+Arbitration & Class Action Waiver
+These Terms include an arbitration agreement and a waiver of your right to participate in class actions or class arbitrations in Section 15.  Except for certain types of disputes described in the arbitration section, you and Kajabi agree that any dispute related to these Terms or your use of our Services will be resolved through mandatory, binding arbitration.  This means that you are giving up your right to have those disputes decided in court by a judge or jury, and you are also giving up your right to participate in a class-action lawsuit or class-wide arbitration.
+Questions
+If you have any questions about these Terms or our Policies, please contact
+legal@kajabi.com
+.
+1. Account Terms
+1.1 Signing Up.  To use Kajabi, you’ll need to create an account (“Account”).  You must be at least 18 years old (or the legal age of majority where you live) to open an Account.
+1.2 Account Info.  When you sign up, we’ll ask for some basic details like your full legal name, business address, a valid email address, and any other required information.  You must keep these details up to date and update them immediately if they change.  By signing up, you’re confirming that you’re using Kajabi for business purposes—not for personal, consumer, household, or family use.
+1.3 Account Owner.  The person who creates an Account is the “Owner” and is responsible for following these Terms.  If you are signing up for an Account on behalf of your employer or client, your employer or client becomes the Owner.  In that case, you must use your work email address and confirm that you have permission to agree to the Terms on their behalf.  Each Account can only have one Owner, although one Owner can operate multiple Accounts.  The Owner’s email will be the Account’s “primary email address”.  This is where we’ll send all important updates.  Make sure it stays current, that it can both send and receive messages, and that you check it regularly.
+1.4 Admin Users.  Depending on your plan, you can create “Admin Users” to allow other people to log in and work in your store.  The Owner can set permissions to control what each Admin User can access or change.  The Owner is responsible for making sure that all employees, agents, and contractors, including Admin Users, follow these Terms, and for any violations they commit.  Even if the Owner delegates work or hires outside help, they remain fully responsible for fulfilling all obligations under these Terms.
+1.5 Account Access.  Please ensure that you and your Admin Users keep your access credentials safe.  You are responsible for any activity that happens under your Account, and Kajabi is not liable for any losses that happen because of activity on your Account.  We may require you to take extra security steps at any time such as adopting multi-factor authentication at our sole discretion.
+1.6 Restrictions.  You agree not to use automated tools like robots, spiders, or scrapers to access or monitor our Services or copy, sell, or otherwise misuse any part of Kajabi’s Services, without our written permission.  You also agree not to bypass our systems, turn on disabled features, or try to reverse-engineer how Kajabi works.
+1.7 Backup.  Remember to keep a backup of all information in your Account.  You are solely responsible for maintaining, protecting, and backing up your Content, as well as any Customer information.  To the fullest extent allowed by law, Kajabi is not responsible for any loss, corruption, or failure to store this information.
+2. Kajabi’s Rights
+2.1 Service.  Kajabi can decide who is permitted to use our Services and can change them at any time.  We reserve the right to close your Account at any time, without notice, for any reason.  We can also refuse or remove any Content from our Services at any time, without notice, for any reason, including if we believe it violates our AUP or these Terms.
+2.2 Features.  Not every feature or service is available to all Heroes, and we do not have to offer every feature in every location.  We can change, add, or remove features or parts of the Services at any time, without notice, for any reason.
+2.3 Abuse.  Any abuse towards any Kajabi employee or representative will lead to the immediate termination of your Account.
+2.4 Competitors.  We may offer our Services to your competitors.  Our employees and contractors may also use Kajabi as Heroes or Customers and may compete with you.
+2.5 Ownership Disputes.  If there is a dispute over who owns an Account, we may ask for proof of ownership, such as a business license, government-issued ID, the last four digits of the credit card on file, or confirmation that you work for the business connected to the Account.  We will decide who the rightful Owner is, and we may transfer the Account to them.  If we cannot determine ownership, we may temporarily freeze or disable the Account until the dispute is resolved.  You may have a dispute with another individual over the ownership of an Account, Kajabi does not take a position or become involved  in any such disputes.
+3. Your Obligations
+3.1 Policies.  You must display clear and public contact information, your terms of service, a refund policy, privacy policy, and any other policies that may be applicable to you by law on your site(s).
+3.2 Sales Tax.  Kajabi is not a marketplace, and any sale made through your site(s) is a direct agreement between you and your Customer.  You are the official seller for all transactions.  This means you are responsible for creating and running your site(s), managing your Content, handling sales, charging Customers, collecting and paying taxes, issuing refunds, fulfilling services, providing customer service, and dealing with fraud or legal issues.  You are also responsible for meeting all legal requirements, following consumer protection laws in every place you sell.
+3.3 Compliance.  You agree to follow all applicable laws, regulations, and third-party rights when using Services and when carrying out your business activities.  You may not use the Services if you are located in a jurisdiction that Kajabi has determined for various reasons, including legal, contractual, and commercial reasons, to be prohibited, including, Cuba, Iran, North Korea, and Syria, and the Crimea, Donetsk, and Luhansk regions or if you are on the U.S.  Department of Commerce’s Denied Persons List or Entity List or the U.S. Treasury Department’s list of Specially Designated Nationals.
+4. Payment of Fees, Taxes & Refunds
+4.1 Fees.  You agree to pay all fees applicable to your Account. These may include subscription fees based on your subscription plan and Services (“Subscription Fees”) and additional fees for Services including Kajabi Payments, Kajabi Tax, Third Party Services, AI Credits, and others as further described in relation to those Services (“Additional Fees”, and together with the Subscription Fees, the “Fees”). Kajabi may offer credit based services, called “AI Credits”. AI Credits can be purchased in two ways: (a) a monthly allocation of AI Credits included with certain plans or add-ons, which reset at the start of each billing cycle and do not roll over; and (b) one-time AI Top Up credit purchases which will be active for your use for twelve (12) months and do not roll over. AI Credits have no cash value. If your Account is cancelled, terminated, or downgraded to a plan that does not include the relevant AI feature, any unused AI Credits will be forfeited. We may change how many AI Credits a given feature uses in our sole discretion at any time.
+4.2 Authorized Payment Method.  You must keep a valid payment method on file with Kajabi (“Authorized Payment Method”) to pay all ongoing and one-time Fees.  We will charge the Authorized Payment Method for all applicable Fees until your Account is closed and all amounts owed are paid in full.  Unless stated otherwise, all Fees are in U.S.  dollars and must be paid in U.S.  currency.
+4.3 Billing Date.  Subscription Fees are billed in advance depending on your subscription plan’s billing cadence (i.e.  monthly or annual) (“Billing Date”).  Additional Fees will be charged and billed at our discretion and will appear on your next invoice if not already paid.  Invoices will be sent to your primary email address and will also be available in your Account.
+4.4 Delinquency.  If we can’t process payment using your Authorized Payment Method, we may try again, require you to provide an alternative Authorized Payment Method, or debit any unpaid Fees from the balance of any Kajabi Payments or Stripe account(s) attached to your Account.  At any time after the failure of your Authorized Payment Method, we may suspend your Account.  During suspension, you will not be able to generally use the Services, your site(s) will be offline and not visible to Customers or leads, and Customers will not be able to access anything they’ve purchased from you.  Your Account will be restored once all outstanding amounts, plus your next billing cycle’s Fees, are paid.  If Fees remain unpaid, we may permanently close your Account.
+4.5 Taxes.  All Fees are charged without including taxes (“Taxes”), which may include sales tax, GST, VAT, or other government charges.  You are responsible for paying all applicable Taxes related to your subscription or purchases.  If we charge Taxes, they are calculated based on the billing address you provide.  If you are tax-exempt, you must give us proof that meets legal requirements before the exemption applies.  If Kajabi does not charge Taxes, you are responsible for determining and paying them directly to the tax authorities in your area.
+4.6 Refund Policy.
+We want every new Hero to feel confident and excited about joining us. That’s why we offer a full, no-questions-asked refund within thirty (30) days of your first charge at Kajabi. If you decide we’re not the right fit, simply email
+billing@kajabi.com
+within those 30 days and follow the instructions provided to cancel your subscription. We’ll process your refund promptly.
+After the first 30 days, all payments are nonrefundable, and we do not offer refunds or credits for partially used subscriptions. If you cancel after this period, you’ll still have full access to the Services until the end of your current billing cycle.
+4.7 Parking Your Account.
+You can “park” your Account at any time.  Parking means pausing your Account without canceling it, so you can take a break.  While your Account is parked, Kajabi stores all your Content.  You can log in to reactivate your Account, change settings, or update billing info.  However, you will not be able to generally use the Services, your site(s) will be offline and not visible to Customers or leads, and Customers will not be able to access anything they’ve purchased from you.
+Kajabi is not responsible for any problems, losses, or disputes parking your Account may cause with your Customers, leads, or any third party.  You agree to pay the designated monthly fee to keep your Account parked.  You can reactivate your Account or cancel at any time.  If you choose to reactivate your Account, you must reactivate into a plan that is available on Kajabi’s pricing page
+https://kajabi.com/pricing
+at the time of reactivation.
+5. Confidentiality
+5.1 Confidential Information.  "Confidential Information" will include, but will not be limited to, any and all information associated with a Party's business and not publicly known, including specific business information, technical processes and formulas, software, customer lists, prospective customer lists, names, addresses and other information regarding customers and prospective customers, product or product designs, sales, costs (including any relevant processing fees), price lists, and other unpublished financial information, business plans and marketing data, and any other confidential and proprietary information, whether or not marked as confidential or proprietary.  Kajabi's Confidential Information includes all information that you receive relating to us, or to the Services, that is not known to the general public including information related to our security program and practices.  Confidential Information does not include information the receiving Party was already public or known to them at the time of disclosure; was independently developed without using or referring to the other Party’s Confidential Information and without violating these Terms; or was lawfully obtained from another source without breaching these Terms.
+5.2 Confidentiality.  Each Party agrees to use the other Party’s Confidential Information only as needed to fulfill its obligat

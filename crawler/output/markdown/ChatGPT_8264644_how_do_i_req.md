@@ -3,9 +3,6 @@
 Source: https://help.openai.com/en/articles/8264644-how-do-i-request-a-refund
 
 How can I set up prepaid billing? | OpenAI Help Center
-Language
-English
-Login
 How can I set up prepaid billing?
 Updated: 25 days ago
 How it works
@@ -25,11 +22,5 @@ billing portal
 and use the “Add to balance” button to purchase additional credits.
 Delayed billing
 Due to the complexity of our billing and processing systems, there may be delays in our ability to cut off access after you consume all of your credits. This excess usage may appear as a negative credit balance in your billing dashboard, and will be deducted from your next credit purchase.
-Related articles
-When can I expect to receive my OpenAI API invoice?
-Understanding the OpenAI API billing cycle
-What is prepaid billing?
-Ads Manager Beta Account Setup
-Learn how to set up your Ads Manager Beta account.
 Was this article helpful?
 Submit

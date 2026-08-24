@@ -20,24 +20,48 @@ export function parseOcrFromText(input: string, fileName?: string): OcrResult {
     else if (c.includes("¥") || c === "cny") currency = "CNY";
     else currency = "USD";
   }
-  // merchant — 动态从知识库匹配（31家+可扩展到全网）
+  // merchant — 动态从知识库匹配（119家，冷门也覆盖）
   // 完整列表来自 crawler/merchants.json 与 refund-policies.json
   const merchants = [
     "Netflix","Spotify","YouTube Premium","Adobe","ChatGPT","Notion","Figma","Zoom","Dropbox","Microsoft 365","Canva","Slack",
     "Apple App Store","Google Play","Steam","Amazon","eBay","AliExpress","Shopify","Booking.com","Airbnb","Expedia","Uber","Ryanair","PayPal","Patreon","Substack","Duolingo","Headspace","Strava","Linear",
+    "Perplexity","Midjourney","Runway","Pika","Jasper","Copy.ai","Replicate","Hugging Face","Anthropic","Character.AI",
+    "Vercel","Netlify","Supabase","Railway","Render","PlanetScale","GitHub","GitLab","Bitbucket","Miro","Monday","Asana","Trello","ClickUp","Loom","Calendly","Typeform","Intercom","Zendesk","Framer","Webflow","Bubble","Airtable","ClickHouse","Datadog","New Relic",
+    "Etsy","Shopify Plus","Walmart","Target","Best Buy","Shein","Temu","Trip.com","Agoda","Skyscanner","Klook","GetYourGuide","Stripe","LemonSqueezy","Paddle","Gumroad","Teachable","Kajabi","Thinkific","Podia","Circle","Discord Nitro","Twitch","OnlyFans","Namecheap","GoDaddy","Cloudflare","DigitalOcean","Heroku","Whimsical","Mural","Balsamiq",
+    "Capacities","Obsidian","Roam Research","Craft Docs","Bear App","Things 3","Ulysses","1Password","Bitwarden","ProtonMail","Fastmail","Skiff","MightyScout","Slite","Coda","Tana","Heptabase","Reflect Notes","Mymind","Superhuman",
     "Apple","Google","Amazon",
   ];
   let merchant = "Unknown Merchant";
-  for (const m of merchants) {
+  // 长名称优先匹配
+  const sorted = [...merchants].sort((a,b)=>b.length-a.length);
+  for (const m of sorted) {
     if (text.includes(m.toLowerCase())) {
       merchant = m;
       break;
     }
   }
-  if (merchant === "Unknown Merchant" && fileName) {
-    // fallback from file name
-    const base = fileName.split(".")[0].replace(/[-_]/g, " ");
-    if (base.length > 2 && base.length < 30) merchant = base;
+  if (merchant === "Unknown Merchant") {
+    if (fileName) {
+      const base = fileName.split(".")[0].replace(/[-_]/g, " ");
+      if (base.length > 2 && base.length < 30) merchant = base;
+    } else {
+      // 兜底：提取首个单词作为商户（支持任意冷门）
+      const first = input.trim().split(/\s+/)[0];
+      if (first && /^[A-Za-z0-9.\-]{2,30}$/.test(first) && !/^\$/.test(first)) {
+        // 首词是商户名，如 "Capacities $12.99"
+        merchant = first.replace(/[^A-Za-z0-9.\-]/g, "");
+        // 特殊处理大小写保留
+        const origFirst = input.trim().split(/\s+/)[0];
+        if (/^[A-Z]/.test(origFirst)) merchant = origFirst.replace(/[^A-Za-z0-9.\-]/g, "");
+      }
+      // 进一步清洗：去掉 $ 金额
+      if (merchant === "Unknown Merchant") {
+        const m2 = input.match(/^([A-Za-z0-9.\- &]+?)\s*\$/);
+        if (m2 && m2[1].trim().length >= 2 && m2[1].trim().length <= 30) {
+          merchant = m2[1].trim();
+        }
+      }
+    }
   }
   // date
   const dateMatch = input.match(/(\d{4}[-/]\d{1,2}[-/]\d{1,2})|(\d{1,2}[-/]\d{1,2}[-/]\d{4})/);

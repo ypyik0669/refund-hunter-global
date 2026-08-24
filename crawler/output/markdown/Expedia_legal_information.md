@@ -8,7 +8,7 @@ Learn more and adjust settings.
 Accept
 Reject
 Welcome to
-Expedia.com
+{{displayDomain}}
 , a US site operated by Expedia, Inc., a Washington corporation.
 Expedia.com
 Welcome to {{domainText}}

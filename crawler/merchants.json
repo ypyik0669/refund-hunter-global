@@ -1,33 +1,1074 @@
 [
-  {"merchant": "Netflix", "category": "subscription", "urls": ["https://help.netflix.com/en/node/116380", "https://www.netflix.com/terms"], "refund_days": 0, "note": "No refund after charge, but goodwill within 3 days"},
-  {"merchant": "Spotify", "category": "subscription", "urls": ["https://support.spotify.com/us/article/4uk5ek5unq1refund", "https://www.spotify.com/us/legal/end-user-agreement/"], "refund_days": 14},
-  {"merchant": "YouTube Premium", "category": "subscription", "urls": ["https://support.google.com/youtube/answer/12662659", "https://support.google.com/googleplay/answer/2479637"], "refund_days": 7},
-  {"merchant": "Adobe", "category": "subscription", "urls": ["https://helpx.adobe.com/manage-account/using/cancel-subscription.html", "https://www.adobe.com/legal/terms.html"], "refund_days": 14},
-  {"merchant": "ChatGPT", "category": "subscription", "urls": ["https://help.openai.com/en/articles/8264644-how-do-i-request-a-refund", "https://openai.com/policies/terms-of-use"], "refund_days": 7},
-  {"merchant": "Notion", "category": "subscription", "urls": ["https://www.notion.com/help/billing-and-payment", "https://www.notion.so/notion/Terms-and-Privacy-28ffdd083dc3406e9a54efeeb07a67e"], "refund_days": 14},
-  {"merchant": "Figma", "category": "subscription", "urls": ["https://help.figma.com/hc/en-us/articles/360039829834-Manage-billing", "https://www.figma.com/legal/tos"], "refund_days": 14},
-  {"merchant": "Zoom", "category": "subscription", "urls": ["https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0063928", "https://www.zoom.com/en/trust/terms/"], "refund_days": 14},
-  {"merchant": "Dropbox", "category": "subscription", "urls": ["https://help.dropbox.com/billing/refunds", "https://www.dropbox.com/terms"], "refund_days": 14},
-  {"merchant": "Microsoft 365", "category": "subscription", "urls": ["https://support.microsoft.com/en-us/account-billing/cancel-a-microsoft-subscription-c2c6cc1f-ed81-4d2e-9158-a49aef2ef557", "https://www.microsoft.com/en-us/servicesagreement"], "refund_days": 30},
-  {"merchant": "Canva", "category": "subscription", "urls": ["https://www.canva.com/help/refunds/", "https://www.canva.com/policies/terms-of-use/"], "refund_days": 30},
-  {"merchant": "Slack", "category": "subscription", "urls": ["https://slack.com/help/articles/360000339221-Manage-your-subscription", "https://slack.com/terms-of-service"], "refund_days": 14},
-  {"merchant": "Apple App Store", "category": "appstore", "urls": ["https://support.apple.com/en-us/102343", "https://apps.apple.com/support"], "refund_days": 14},
-  {"merchant": "Google Play", "category": "appstore", "urls": ["https://support.google.com/googleplay/answer/2479637", "https://play.google.com/about/play-terms/"], "refund_days": 48},
-  {"merchant": "Steam", "category": "appstore", "urls": ["https://store.steampowered.com/steam_refunds/", "https://store.steampowered.com/subscriber_agreement/"], "refund_days": 14},
-  {"merchant": "Amazon", "category": "ecommerce", "urls": ["https://www.amazon.com/gp/help/customer/display.html?nodeId=GKM69DUUUPC8HKTX", "https://www.amazon.com/gp/help/customer/display.html?nodeId=468496"], "refund_days": 30},
-  {"merchant": "eBay", "category": "ecommerce", "urls": ["https://www.ebay.com/help/policies/ebay-money-back-guarantee/ebay-money-back-guarantee?id=4221", "https://www.ebay.com/help/policies/money-back-guarantee"], "refund_days": 30},
-  {"merchant": "AliExpress", "category": "ecommerce", "urls": ["https://sale.aliexpress.com/__pc/buyerProtection.htm", "https://www.aliexpress.com/p/buyer-protection/index.html"], "refund_days": 75},
-  {"merchant": "Shopify", "category": "ecommerce", "urls": ["https://www.shopify.com/legal/terms", "https://help.shopify.com/en/manual/your-account/manage-billing"], "refund_days": 14},
-  {"merchant": "Booking.com", "category": "travel", "urls": ["https://www.booking.com/content/terms.html", "https://www.booking.com/cancellation.html"], "refund_days": 7},
-  {"merchant": "Airbnb", "category": "travel", "urls": ["https://www.airbnb.com/help/article/2868", "https://www.airbnb.com/terms"], "refund_days": 14},
-  {"merchant": "Expedia", "category": "travel", "urls": ["https://www.expedia.com/lp/legal-information", "https://www.expedia.com/p/info-other/legal"], "refund_days": 7},
-  {"merchant": "Uber", "category": "travel", "urls": ["https://help.uber.com/riders/article/?ID=5636", "https://www.uber.com/legal/en/document/?name=general-community-guidelines"], "refund_days": 30},
-  {"merchant": "Ryanair", "category": "travel", "urls": ["https://www.ryanair.com/lv/en/labs/help-centre/terms-and-conditions", "https://www.ryanair.com/lv/en/labs/help-centre/faq/refunds"], "refund_days": 7},
-  {"merchant": "PayPal", "category": "payment", "urls": ["https://www.paypal.com/us/cshelp/article/what-is-paypal-buyer-protection-help351", "https://www.paypal.com/webapps/mpp/ua/useragreement-full"], "refund_days": 180},
-  {"merchant": "Patreon", "category": "payment", "urls": ["https://support.patreon.com/hc/en-us/articles/360004058731-Refunds", "https://www.patreon.com/policy/legal"], "refund_days": 30},
-  {"merchant": "Substack", "category": "payment", "urls": ["https://support.substack.com/hc/en-us/articles/360037165333-Refunds", "https://substack.com/tos"], "refund_days": 14},
-  {"merchant": "Duolingo", "category": "subscription", "urls": ["https://support.duolingo.com/hc/en-us/articles/360007461700-Refunds", "https://www.duolingo.com/terms"], "refund_days": 7},
-  {"merchant": "Headspace", "category": "subscription", "urls": ["https://help.headspace.com/hc/en-us/articles/360000050393-Refunds", "https://www.headspace.com/terms-and-conditions"], "refund_days": 14},
-  {"merchant": "Strava", "category": "subscription", "urls": ["https://support.strava.com/hc/en-us/articles/216918527-Cancel-automatic-renewal-or-request-a-refund", "https://www.strava.com/legal/terms"], "refund_days": 14},
-  {"merchant": "Linear", "category": "subscription", "urls": ["https://linear.app/terms", "https://linear.app/pricing"], "refund_days": 14}
+  {
+    "merchant": "Netflix",
+    "category": "subscription",
+    "urls": [
+      "https://help.netflix.com/en/node/116380",
+      "https://www.netflix.com/terms"
+    ],
+    "refund_days": 0,
+    "note": "No refund after charge, but goodwill within 3 days"
+  },
+  {
+    "merchant": "Spotify",
+    "category": "subscription",
+    "urls": [
+      "https://support.spotify.com/us/article/4uk5ek5unq1refund",
+      "https://www.spotify.com/us/legal/end-user-agreement/"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "YouTube Premium",
+    "category": "subscription",
+    "urls": [
+      "https://support.google.com/youtube/answer/12662659",
+      "https://support.google.com/googleplay/answer/2479637"
+    ],
+    "refund_days": 7
+  },
+  {
+    "merchant": "Adobe",
+    "category": "subscription",
+    "urls": [
+      "https://helpx.adobe.com/manage-account/using/cancel-subscription.html",
+      "https://www.adobe.com/legal/terms.html"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "ChatGPT",
+    "category": "subscription",
+    "urls": [
+      "https://help.openai.com/en/articles/8264644-how-do-i-request-a-refund",
+      "https://openai.com/policies/terms-of-use"
+    ],
+    "refund_days": 7
+  },
+  {
+    "merchant": "Notion",
+    "category": "subscription",
+    "urls": [
+      "https://www.notion.com/help/billing-and-payment",
+      "https://www.notion.so/notion/Terms-and-Privacy-28ffdd083dc3406e9a54efeeb07a67e"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Figma",
+    "category": "subscription",
+    "urls": [
+      "https://help.figma.com/hc/en-us/articles/360039829834-Manage-billing",
+      "https://www.figma.com/legal/tos"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Zoom",
+    "category": "subscription",
+    "urls": [
+      "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0063928",
+      "https://www.zoom.com/en/trust/terms/"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Dropbox",
+    "category": "subscription",
+    "urls": [
+      "https://help.dropbox.com/billing/refunds",
+      "https://www.dropbox.com/terms"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Microsoft 365",
+    "category": "subscription",
+    "urls": [
+      "https://support.microsoft.com/en-us/account-billing/cancel-a-microsoft-subscription-c2c6cc1f-ed81-4d2e-9158-a49aef2ef557",
+      "https://www.microsoft.com/en-us/servicesagreement"
+    ],
+    "refund_days": 30
+  },
+  {
+    "merchant": "Canva",
+    "category": "subscription",
+    "urls": [
+      "https://www.canva.com/help/refunds/",
+      "https://www.canva.com/policies/terms-of-use/"
+    ],
+    "refund_days": 30
+  },
+  {
+    "merchant": "Slack",
+    "category": "subscription",
+    "urls": [
+      "https://slack.com/help/articles/360000339221-Manage-your-subscription",
+      "https://slack.com/terms-of-service"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Apple App Store",
+    "category": "appstore",
+    "urls": [
+      "https://support.apple.com/en-us/102343",
+      "https://apps.apple.com/support"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Google Play",
+    "category": "appstore",
+    "urls": [
+      "https://support.google.com/googleplay/answer/2479637",
+      "https://play.google.com/about/play-terms/"
+    ],
+    "refund_days": 48
+  },
+  {
+    "merchant": "Steam",
+    "category": "appstore",
+    "urls": [
+      "https://store.steampowered.com/steam_refunds/",
+      "https://store.steampowered.com/subscriber_agreement/"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Amazon",
+    "category": "ecommerce",
+    "urls": [
+      "https://www.amazon.com/gp/help/customer/display.html?nodeId=GKM69DUUUPC8HKTX",
+      "https://www.amazon.com/gp/help/customer/display.html?nodeId=468496"
+    ],
+    "refund_days": 30
+  },
+  {
+    "merchant": "eBay",
+    "category": "ecommerce",
+    "urls": [
+      "https://www.ebay.com/help/policies/ebay-money-back-guarantee/ebay-money-back-guarantee?id=4221",
+      "https://www.ebay.com/help/policies/money-back-guarantee"
+    ],
+    "refund_days": 30
+  },
+  {
+    "merchant": "AliExpress",
+    "category": "ecommerce",
+    "urls": [
+      "https://sale.aliexpress.com/__pc/buyerProtection.htm",
+      "https://www.aliexpress.com/p/buyer-protection/index.html"
+    ],
+    "refund_days": 75
+  },
+  {
+    "merchant": "Shopify",
+    "category": "ecommerce",
+    "urls": [
+      "https://www.shopify.com/legal/terms",
+      "https://help.shopify.com/en/manual/your-account/manage-billing"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Booking.com",
+    "category": "travel",
+    "urls": [
+      "https://www.booking.com/content/terms.html",
+      "https://www.booking.com/cancellation.html"
+    ],
+    "refund_days": 7
+  },
+  {
+    "merchant": "Airbnb",
+    "category": "travel",
+    "urls": [
+      "https://www.airbnb.com/help/article/2868",
+      "https://www.airbnb.com/terms"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Expedia",
+    "category": "travel",
+    "urls": [
+      "https://www.expedia.com/lp/legal-information",
+      "https://www.expedia.com/p/info-other/legal"
+    ],
+    "refund_days": 7
+  },
+  {
+    "merchant": "Uber",
+    "category": "travel",
+    "urls": [
+      "https://help.uber.com/riders/article/?ID=5636",
+      "https://www.uber.com/legal/en/document/?name=general-community-guidelines"
+    ],
+    "refund_days": 30
+  },
+  {
+    "merchant": "Ryanair",
+    "category": "travel",
+    "urls": [
+      "https://www.ryanair.com/lv/en/labs/help-centre/terms-and-conditions",
+      "https://www.ryanair.com/lv/en/labs/help-centre/faq/refunds"
+    ],
+    "refund_days": 7
+  },
+  {
+    "merchant": "PayPal",
+    "category": "payment",
+    "urls": [
+      "https://www.paypal.com/us/cshelp/article/what-is-paypal-buyer-protection-help351",
+      "https://www.paypal.com/webapps/mpp/ua/useragreement-full"
+    ],
+    "refund_days": 180
+  },
+  {
+    "merchant": "Patreon",
+    "category": "payment",
+    "urls": [
+      "https://support.patreon.com/hc/en-us/articles/360004058731-Refunds",
+      "https://www.patreon.com/policy/legal"
+    ],
+    "refund_days": 30
+  },
+  {
+    "merchant": "Substack",
+    "category": "payment",
+    "urls": [
+      "https://support.substack.com/hc/en-us/articles/360037165333-Refunds",
+      "https://substack.com/tos"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Duolingo",
+    "category": "subscription",
+    "urls": [
+      "https://support.duolingo.com/hc/en-us/articles/360007461700-Refunds",
+      "https://www.duolingo.com/terms"
+    ],
+    "refund_days": 7
+  },
+  {
+    "merchant": "Headspace",
+    "category": "subscription",
+    "urls": [
+      "https://help.headspace.com/hc/en-us/articles/360000050393-Refunds",
+      "https://www.headspace.com/terms-and-conditions"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Strava",
+    "category": "subscription",
+    "urls": [
+      "https://support.strava.com/hc/en-us/articles/216918527-Cancel-automatic-renewal-or-request-a-refund",
+      "https://www.strava.com/legal/terms"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Linear",
+    "category": "subscription",
+    "urls": [
+      "https://linear.app/terms",
+      "https://linear.app/pricing"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Perplexity",
+    "category": "subscription",
+    "urls": [
+      "https://www.perplexity.ai/hub/legal/terms-of-service",
+      "https://www.perplexity.ai/help-center"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Midjourney",
+    "category": "subscription",
+    "urls": [
+      "https://docs.midjourney.com/docs/terms-of-service",
+      "https://www.midjourney.com/legal/terms"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Runway",
+    "category": "subscription",
+    "urls": [
+      "https://runwayml.com/terms-of-use",
+      "https://help.runwayml.com"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Pika",
+    "category": "subscription",
+    "urls": [
+      "https://pika.art/terms",
+      "https://pika.art/privacy"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Jasper",
+    "category": "subscription",
+    "urls": [
+      "https://www.jasper.ai/legal/terms",
+      "https://help.jasper.ai"
+    ],
+    "refund_days": 7
+  },
+  {
+    "merchant": "Copy.ai",
+    "category": "subscription",
+    "urls": [
+      "https://www.copy.ai/terms",
+      "https://help.copy.ai"
+    ],
+    "refund_days": 7
+  },
+  {
+    "merchant": "Replicate",
+    "category": "subscription",
+    "urls": [
+      "https://replicate.com/terms",
+      "https://replicate.com/docs"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Hugging Face",
+    "category": "subscription",
+    "urls": [
+      "https://huggingface.co/terms-of-service",
+      "https://huggingface.co/docs/hub/security-tos"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Anthropic",
+    "category": "subscription",
+    "urls": [
+      "https://www.anthropic.com/legal/consumer-terms",
+      "https://support.anthropic.com"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Character.AI",
+    "category": "subscription",
+    "urls": [
+      "https://character.ai/tos",
+      "https://character.ai/privacy"
+    ],
+    "refund_days": 7
+  },
+  {
+    "merchant": "Vercel",
+    "category": "subscription",
+    "urls": [
+      "https://vercel.com/legal/terms",
+      "https://vercel.com/support/articles/refunds"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Netlify",
+    "category": "subscription",
+    "urls": [
+      "https://www.netlify.com/legal/terms-of-use/",
+      "https://docs.netlify.com/billing/manage-billing/"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Supabase",
+    "category": "subscription",
+    "urls": [
+      "https://supabase.com/terms",
+      "https://supabase.com/docs/guides/platform/billing"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Railway",
+    "category": "subscription",
+    "urls": [
+      "https://railway.app/legal/terms",
+      "https://docs.railway.app/reference/pricing/refunds"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Render",
+    "category": "subscription",
+    "urls": [
+      "https://render.com/terms",
+      "https://docs.render.com/billing"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "PlanetScale",
+    "category": "subscription",
+    "urls": [
+      "https://planetscale.com/legal/terms",
+      "https://planetscale.com/docs/billing"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "GitHub",
+    "category": "subscription",
+    "urls": [
+      "https://docs.github.com/en/billing/managing-billing-for-your-products/managing-billing-for-github-copilot/about-billing-for-github-copilot",
+      "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "GitLab",
+    "category": "subscription",
+    "urls": [
+      "https://about.gitlab.com/terms/",
+      "https://docs.gitlab.com/subscriptions/"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Bitbucket",
+    "category": "subscription",
+    "urls": [
+      "https://www.atlassian.com/legal/cloud-terms-of-service",
+      "https://support.atlassian.com/billing/"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Miro",
+    "category": "subscription",
+    "urls": [
+      "https://miro.com/legal/terms-of-service/",
+      "https://help.miro.com/hc/en-us/articles/360020675533"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Monday",
+    "category": "subscription",
+    "urls": [
+      "https://monday.com/terms/tos",
+      "https://support.monday.com/hc/en-us/articles/360002546300"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Asana",
+    "category": "subscription",
+    "urls": [
+      "https://asana.com/terms",
+      "https://asana.com/guide/help/premium/billing"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Trello",
+    "category": "subscription",
+    "urls": [
+      "https://www.atlassian.com/legal/cloud-terms-of-service",
+      "https://support.atlassian.com/trello/"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "ClickUp",
+    "category": "subscription",
+    "urls": [
+      "https://clickup.com/terms",
+      "https://help.clickup.com/hc/en-us/articles/6300301843342"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Loom",
+    "category": "subscription",
+    "urls": [
+      "https://www.loom.com/terms",
+      "https://support.loom.com/hc/en-us/articles/360002708834"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Calendly",
+    "category": "subscription",
+    "urls": [
+      "https://calendly.com/terms",
+      "https://help.calendly.com/hc/en-us/articles/223195628"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Typeform",
+    "category": "subscription",
+    "urls": [
+      "https://www.typeform.com/terms-service",
+      "https://www.typeform.com/help/billing/"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Intercom",
+    "category": "subscription",
+    "urls": [
+      "https://www.intercom.com/legal/terms-and-policies",
+      "https://www.intercom.com/help/en/articles/180-billing"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Zendesk",
+    "category": "subscription",
+    "urls": [
+      "https://www.zendesk.com/company/agreements-and-terms/terms-of-use/",
+      "https://support.zendesk.com/hc/en-us/articles/4408883018903"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Framer",
+    "category": "subscription",
+    "urls": [
+      "https://www.framer.com/legal/terms-of-service/",
+      "https://www.framer.com/help/"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Webflow",
+    "category": "subscription",
+    "urls": [
+      "https://webflow.com/legal/terms",
+      "https://help.webflow.com/hc/en-us/articles/33961289368723"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Bubble",
+    "category": "subscription",
+    "urls": [
+      "https://bubble.io/terms",
+      "https://manual.bubble.io/help-guides/billing"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Airtable",
+    "category": "subscription",
+    "urls": [
+      "https://www.airtable.com/company/tos",
+      "https://support.airtable.com/docs/billing"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "ClickHouse",
+    "category": "subscription",
+    "urls": [
+      "https://clickhouse.com/legal/agreement",
+      "https://clickhouse.com/docs/billing"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Datadog",
+    "category": "subscription",
+    "urls": [
+      "https://www.datadoghq.com/legal/terms/",
+      "https://docs.datadoghq.com/billing/"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "New Relic",
+    "category": "subscription",
+    "urls": [
+      "https://newrelic.com/termsandconditions/terms",
+      "https://docs.newrelic.com/docs/billing/"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Etsy",
+    "category": "ecommerce",
+    "urls": [
+      "https://www.etsy.com/legal/policy",
+      "https://www.etsy.com/help/article/9"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Shopify Plus",
+    "category": "ecommerce",
+    "urls": [
+      "https://www.shopify.com/legal/terms",
+      "https://help.shopify.com/en/manual/your-account/manage-billing"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Walmart",
+    "category": "ecommerce",
+    "urls": [
+      "https://www.walmart.com/help/article/return-policy/90c57665d354452086a3ea362f6197db",
+      "https://www.walmart.com/help/article/walmart-refund-policy"
+    ],
+    "refund_days": 30
+  },
+  {
+    "merchant": "Target",
+    "category": "ecommerce",
+    "urls": [
+      "https://www.target.com/c/returns/-/N-mh8a2",
+      "https://help.target.com/help/subcategoryarticle?childcat=Returns"
+    ],
+    "refund_days": 30
+  },
+  {
+    "merchant": "Best Buy",
+    "category": "ecommerce",
+    "urls": [
+      "https://www.bestbuy.com/site/misc/finance-rewards/best-buy-return-exchange/pcmcat260800050014.c",
+      "https://www.bestbuy.com/site/help-topics/best-buy-return-policy/pcmcat260800050014.c"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Shein",
+    "category": "ecommerce",
+    "urls": [
+      "https://www.shein.com/return-policy-a-281.html",
+      "https://www.shein.com/terms-and-conditions-a-399.html"
+    ],
+    "refund_days": 30
+  },
+  {
+    "merchant": "Temu",
+    "category": "ecommerce",
+    "urls": [
+      "https://www.temu.com/return-policy.html",
+      "https://www.temu.com/terms.html"
+    ],
+    "refund_days": 30
+  },
+  {
+    "merchant": "Trip.com",
+    "category": "travel",
+    "urls": [
+      "https://www.trip.com/help/article/cancellation-policy-14086.html",
+      "https://www.trip.com/terms/"
+    ],
+    "refund_days": 7
+  },
+  {
+    "merchant": "Agoda",
+    "category": "travel",
+    "urls": [
+      "https://www.agoda.com/info/agoda-terms.html",
+      "https://www.agoda.com/en-gb/cancellation"
+    ],
+    "refund_days": 7
+  },
+  {
+    "merchant": "Skyscanner",
+    "category": "travel",
+    "urls": [
+      "https://www.skyscanner.com/terms",
+      "https://www.skyscanner.net/help"
+    ],
+    "refund_days": 7
+  },
+  {
+    "merchant": "Klook",
+    "category": "travel",
+    "urls": [
+      "https://www.klook.com/en-US/terms/",
+      "https://www.klook.com/en-US/help/"
+    ],
+    "refund_days": 7
+  },
+  {
+    "merchant": "GetYourGuide",
+    "category": "travel",
+    "urls": [
+      "https://www.getyourguide.com/terms-and-conditions/",
+      "https://www.getyourguide.com/cancellation-policy/"
+    ],
+    "refund_days": 7
+  },
+  {
+    "merchant": "Stripe",
+    "category": "payment",
+    "urls": [
+      "https://stripe.com/legal/ssa",
+      "https://stripe.com/resources/refunds"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "LemonSqueezy",
+    "category": "payment",
+    "urls": [
+      "https://www.lemonsqueezy.com/terms",
+      "https://docs.lemonsqueezy.com/help/billing/refunds"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Paddle",
+    "category": "payment",
+    "urls": [
+      "https://www.paddle.com/legal/terms",
+      "https://www.paddle.com/help/sell/billing"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Gumroad",
+    "category": "payment",
+    "urls": [
+      "https://gumroad.com/terms",
+      "https://help.gumroad.com/article/67-gumroad-refund-policy"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Teachable",
+    "category": "subscription",
+    "urls": [
+      "https://support.teachable.com/en/articles/1190889-refund-policy",
+      "https://teachable.com/terms-of-use"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Kajabi",
+    "category": "subscription",
+    "urls": [
+      "https://kajabi.com/policies/terms",
+      "https://help.kajabi.com/hc/en-us/articles/360037151054"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Thinkific",
+    "category": "subscription",
+    "urls": [
+      "https://www.thinkific.com/terms",
+      "https://support.thinkific.com/hc/en-us/articles/360030355654"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Podia",
+    "category": "subscription",
+    "urls": [
+      "https://www.podia.com/terms",
+      "https://help.podia.com/en/articles/1150011"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Circle",
+    "category": "subscription",
+    "urls": [
+      "https://circle.so/legal/terms",
+      "https://community.circle.so/help"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Discord Nitro",
+    "category": "subscription",
+    "urls": [
+      "https://discord.com/terms",
+      "https://support.discord.com/hc/en-us/articles/360012668831"
+    ],
+    "refund_days": 7
+  },
+  {
+    "merchant": "Twitch",
+    "category": "subscription",
+    "urls": [
+      "https://www.twitch.tv/p/legal/terms-of-service/",
+      "https://help.twitch.tv/s/article/how-to-request-a-refund"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "OnlyFans",
+    "category": "subscription",
+    "urls": [
+      "https://onlyfans.com/terms",
+      "https://onlyfans.com/help"
+    ],
+    "refund_days": 7
+  },
+  {
+    "merchant": "Namecheap",
+    "category": "subscription",
+    "urls": [
+      "https://www.namecheap.com/legal/general/terms-of-service/",
+      "https://www.namecheap.com/help-center/returns/"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "GoDaddy",
+    "category": "subscription",
+    "urls": [
+      "https://www.godaddy.com/legal/agreements",
+      "https://www.godaddy.com/help/refunds-1234"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Cloudflare",
+    "category": "subscription",
+    "urls": [
+      "https://www.cloudflare.com/terms/",
+      "https://support.cloudflare.com/hc/en-us/articles/200168156"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "DigitalOcean",
+    "category": "subscription",
+    "urls": [
+      "https://www.digitalocean.com/terms",
+      "https://docs.digitalocean.com/products/billing/"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Heroku",
+    "category": "subscription",
+    "urls": [
+      "https://www.heroku.com/policy/tos",
+      "https://help.heroku.com/billing"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Whimsical",
+    "category": "subscription",
+    "urls": [
+      "https://whimsical.com/terms",
+      "https://help.whimsical.com"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Mural",
+    "category": "subscription",
+    "urls": [
+      "https://www.mural.co/terms",
+      "https://support.mural.co"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Balsamiq",
+    "category": "subscription",
+    "urls": [
+      "https://balsamiq.com/company/terms/",
+      "https://balsamiq.com/wireframes/cloud/billing/"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Capacities",
+    "category": "subscription",
+    "urls": [
+      "https://capacities.io/terms",
+      "https://capacities.io/privacy"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Obsidian",
+    "category": "subscription",
+    "urls": [
+      "https://obsidian.md/terms",
+      "https://help.obsidian.md/"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Roam Research",
+    "category": "subscription",
+    "urls": [
+      "https://roamresearch.com/#/terms",
+      "https://roamresearch.com/privacy"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Craft Docs",
+    "category": "subscription",
+    "urls": [
+      "https://www.craft.do/terms",
+      "https://support.craft.do"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Bear App",
+    "category": "subscription",
+    "urls": [
+      "https://bear.app/terms/",
+      "https://bear.app/faq/"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Things 3",
+    "category": "subscription",
+    "urls": [
+      "https://culturedcode.com/things/terms/",
+      "https://culturedcode.com/support/"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Ulysses",
+    "category": "subscription",
+    "urls": [
+      "https://ulysses.app/terms/",
+      "https://ulysses.app/support/"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "1Password",
+    "category": "subscription",
+    "urls": [
+      "https://1password.com/legal/terms/",
+      "https://support.1password.com/billing/"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Bitwarden",
+    "category": "subscription",
+    "urls": [
+      "https://bitwarden.com/terms/",
+      "https://bitwarden.com/help/article/billing/"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "ProtonMail",
+    "category": "subscription",
+    "urls": [
+      "https://proton.me/legal/terms",
+      "https://proton.me/support/billing"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Fastmail",
+    "category": "subscription",
+    "urls": [
+      "https://www.fastmail.com/about/terms/",
+      "https://www.fastmail.help/hc/en-us/articles/360060591834"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Skiff",
+    "category": "subscription",
+    "urls": [
+      "https://skiff.com/terms",
+      "https://skiff.com/privacy"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "MightyScout",
+    "category": "subscription",
+    "urls": [
+      "https://www.mightyscout.com/terms",
+      "https://help.mightyscout.com"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Slite",
+    "category": "subscription",
+    "urls": [
+      "https://slite.com/terms",
+      "https://help.slite.com"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Coda",
+    "category": "subscription",
+    "urls": [
+      "https://coda.io/trust/terms",
+      "https://help.coda.io/en/articles/1137949"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Tana",
+    "category": "subscription",
+    "urls": [
+      "https://tana.inc/terms",
+      "https://tana.inc/privacy"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Heptabase",
+    "category": "subscription",
+    "urls": [
+      "https://heptabase.com/terms",
+      "https://help.heptabase.com"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Reflect Notes",
+    "category": "subscription",
+    "urls": [
+      "https://reflect.notes/terms",
+      "https://reflect.notes/privacy"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Mymind",
+    "category": "subscription",
+    "urls": [
+      "https://mymind.com/terms",
+      "https://mymind.com/privacy"
+    ],
+    "refund_days": 14
+  },
+  {
+    "merchant": "Superhuman",
+    "category": "subscription",
+    "urls": [
+      "https://superhuman.com/terms",
+      "https://help.superhuman.com"
+    ],
+    "refund_days": 14
+  }
 ]

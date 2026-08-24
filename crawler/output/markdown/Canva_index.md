@@ -3,12 +3,9 @@
 Source: https://www.canva.com/policies/terms-of-use/
 
 Terms of Use
-Loading
 Your browser is not supported and may not give the best experience.
 Skip to main content
 Canva home
-Sign up
-Log in
 Home
 Trust
 Terms of Use
@@ -162,4 +159,4 @@ Content License Agreement
 We never own your designs, but there may be certain restrictions depending on the types of Canva-provided content you’ve included in your designs.
 d. Sharing and Publishing Your Designs
 . You may publish or share Designs with others within the Service, via a Third Party Service, or via a link. Canva maintains no responsibility in relation to such sharing of Designs and Canva’s enablement of such activity or the Service’s performance of actions to publicly share Designs at your instruction will not be considered a violation of any of Canva’s obligations under these Terms.
-There are a number of ways to share your designs with the world. You’re responsible fo
+There are a number of ways to share your designs with the world. You’re responsible for who you share them wi

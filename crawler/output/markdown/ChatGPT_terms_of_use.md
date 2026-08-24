@@ -14,72 +14,12 @@ Developers
 Company
 Foundation
 (opens in a new window)
-Terms of Use | OpenAI
+Try ChatGPT
+(opens in a new window)
+Login
+OpenAI
 Select language
-English (United States)
-العربية
-አማርኛ
-հայերեն
-বাংলা
-bosanski
-български
-မြန်မာ
-català
-hrvatski
-čeština
-dansk
-Nederlands
-eesti
-suomi
-français (Canada)
-français (France)
-ქართული
-Deutsch
-Ελληνικά
-ગુજરાતી
-हिन्दी
-magyar
-íslenska
-Indonesia
-Gaeilge
-italiano
-日本語
-ಕನ್ನಡ
-қазақ тілі
-한국어
-latviešu
-lietuvių
-Macedonian
-Melayu
-മലയാളം
-Malti
-मराठी
-Mongolian
-norsk bokmål
-polski
-português (Brasil)
-português (Portugal)
-română
-русский
-slovenčina
-slovenščina
-српски (Srbija)
-Soomaali
-español (Latinoamérica)
-español (España)
-Kiswahili
-svenska
-Filipino
-தமிழ்
-తెలుగు
-ไทย
-Türkçe
-українська
-اردو
-Tiếng Việt
-中文 (中国)
-中文 (台灣)
-中文 (香港)
+…
 Published: January 1, 2026
 Terms of Use
 Effective: January 1, 2026 (
@@ -208,4 +148,5 @@ here⁠
 (opens in a new window)
 ).
 OpenAI will not seek attorneys’ fees and costs in arbitration unless the arbitrator determines that your claim is frivolous. The activities described in these Terms involve interstate commerce and the Federal Arbitration Act will govern the interpretation and enforcement of these arbitration terms and any arbitration.
-Arbitration procedures. The arbitration will be conducted by videoconference if possible, but if the arbitrator determines a hearing should be conducted in person, the location will be mutually agreed upon, in the county where you reside, or as determined by the arbitrator, unless the batch arbitration process applies. The arbitration will be conducted by a sole arbitrator. The arbitrator will be either a retired judge or an attorney licensed to practice law in the state of California. The arbitrator will have exclusi
+Arbitration procedures. The arbitration will be conducted by videoconference if possible, but if the arbitrator determines a hearing should be conducted in person, the location will be mutually agreed upon, in the county where you reside, or as determined by the arbitrator, unless the batch arbitration process applies. The arbitration will be conducted by a sole arbitrator. The arbitrator will be either a retired judge or an attorney licensed to practice law in the state of California. The arbitrator will have exclusive authority to resolve any Dispute, except the state or federal courts of San Francisco, California have the authority to determine any Dispute about enforceability, validity of the class action waiver, or requests for public injunctive relief, as set out below. Any settlement offer amounts will not be disclosed to the arbitrator by either party until after the arbitrator determines the final award, if any. The arbitrator has the authority to grant motions dispositive of all or part of any Dispute.
+Exceptions. This section does not require informal dispute resolution o

@@ -12,124 +12,10 @@ Error:
 Enter a destination to start searching.
 Check-in date
 +
-Check-in month
-August 2026
-September 2026
-October 2026
-November 2026
-December 2026
-January 2027
-February 2027
-March 2027
-April 2027
-May 2027
-June 2027
-July 2027
-August 2027
-September 2027
-October 2027
-November 2027
-Check-in day
 Check-in
 Check-out date
 +
-Check-out month
-August 2026
-September 2026
-October 2026
-November 2026
-December 2026
-January 2027
-February 2027
-March 2027
-April 2027
-May 2027
-June 2027
-July 2027
-August 2027
-September 2027
-October 2027
-November 2027
-Check-out day
 Check-out
-August 2026
-Mo
-Tu
-We
-Th
-Fr
-Sa
-Su
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-September 2026
-Mo
-Tu
-We
-Th
-Fr
-Sa
-Su
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-Check-in - Check-out
 Travelers
 Rooms and occupancy
 2 adults
@@ -239,4 +125,4 @@ Sign in to your account
 or use one of these options
 Don't have an account yet?
 Create your account
-2604700,GfCDATBbbObSARVVRGHSOSGXSafIcFDFO,2604700|4,GfCDATBbbObSARVVRGHSOSGXSafIcFDFO|1
+2604700,2604700|4

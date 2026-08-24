@@ -84,12 +84,6 @@ Türkçe (Turkish)
 Tiếng Việt (Vietnamese)
 Українська (Ukrainian)
 Report a translation problem
-Browse
-Recommendations
-Categories
-Ways to Play
-Special Sections
-Advanced Search
 Home
 Steam Subscriber Agreement
 STEAM® SUBSCRIBER AGREEMENT
@@ -157,4 +151,4 @@ Commercial use of some Valve game content is permitted via features such as Stea
 To view the Valve video policy containing additional terms covering the use of audio-visual works incorporating Valve intellectual property or created with The Source® Filmmaker Software, please click here:
 http://www.valvesoftware.com/videopolicy.html
 E. License to Use Valve Dedicated Server Software
-Your Subscription(s) may contain access to the Valve Dedicated Server Software. If so, you may use the Valve Dedicated Server Software on an unlimited number of computers for the purpose of hosting online multiplayer games of Valve products. If you wish to operate the Valve Dedicated Server Software, you will be solely respon
+Your Subscription(s) may contain access to the Valve Dedicated Server Software. If so, you may use the Valve Dedicated Server Software on an unlimited number of computers for the purpose of hosting online multiplayer games of Valve products. If you wish to operate the Valve Dedicated Server Software, you will be solely responsible for procuring any Internet access, bandwidth, or hardware for such activit

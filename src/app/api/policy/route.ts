@@ -26,19 +26,19 @@ export async function GET(req: NextRequest) {
     return NextResponse.json(data);
   }
 
-  // 2. 冷门：实时发现（Jina/Exa/firecrawl）— 8秒超时兜底
+  // 2. 冷门：实时发现（Jina/Exa/firecrawl）— 8秒超时兜底，错误也兜底为generic
   try {
     const discovered = await Promise.race([
       discoverPolicy(merchant),
       new Promise<null>((resolve) => setTimeout(() => resolve(null), 8000)),
     ]);
-    if (discovered) {
+    if (discovered && discovered.markdown && discovered.markdown.length > 200) {
       const data = { policy: discovered, source: discovered.engine, discovered: true };
       cache.set(key, { data, ts: Date.now() });
       return NextResponse.json(data);
     }
   } catch (e) {
-    console.error("discover fail", e);
+    console.error("discover fail", merchant, e);
   }
 
   // 3. 兜底：返回通用模板信息

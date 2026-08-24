@@ -2,9 +2,11 @@
 
 Source: https://www.airbnb.com/help/article/2868
 
-Rebooking and refund policy for homes - Airbnb Help Center
+Airbnb: Vacation Rentals, Cabins, Beach Houses, Unique Homes & Experiences
 We’re sorry, some parts of the Airbnb website don’t work properly without JavaScript enabled.
 Help Center
+Search
+Suggestions will show after typing in the search input. Use the up and down arrows to review. Use enter to select. If the selection is a phrase, that phrase will be submitted to search. If the suggestion is a link, the browser will navigate to that page.
 Community policy
 Rebooking and refund policy for homes
 Effective Date: February 6, 2025

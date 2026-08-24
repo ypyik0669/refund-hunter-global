@@ -243,9 +243,6 @@ Cancellation fee and refunds
 A refund depends on when you cancel and the type of subscription you purchased. For most plans, you get a full refund if you cancel within 14 days of your initial purchase. Learn more about
 refund eligibility when you cancel your plan
 .
-Was this page helpful?
-Yes, thanks
-Not really
 Previous
 Renew your Adobe account plan with student and teacher discount
 Next
@@ -258,14 +255,3 @@ Adobe Home
 Access your favorite Creative Cloud apps, services, file management, and more.
 Language Navigation
 Language Navigation
-Locale Modalv2
-We have detected you are visiting a different region on adobe.com
-English
-Bahasa Malaysia
-Laman Adobe ini tidak sepadan dengan lokasi anda
-Berdasarkan lokasi anda, kami fikir anda mungkin lebih suka tapak web Malaysia, tempat anda akan mendapat kandungan, tawaran dan penentuan harga serantau.
-Malaysia
-Malaysia - English
-Malaysia - Bahasa Malaysia
-United States
-Chat with us

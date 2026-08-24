@@ -12,7 +12,6 @@ Search
 Search for help
 No results
 Cancel
-Sign in to your account
 Sign in
 Sign in with Microsoft
 Sign in or create an account.

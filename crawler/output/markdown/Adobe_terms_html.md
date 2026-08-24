@@ -3,21 +3,13 @@
 Source: https://www.adobe.com/legal/terms.html
 
 Adobe General Terms of Use | Adobe Legal
-Legal
-Overview
-Trade Compliance
-Copyright, Trademark and DMCA
-Law Enforcement Requests
-License and Terms of Use
-Consumer licensing
-Enterprise licensing
-Adobe Value Incentive Program
-Privacy
-.
+#000000
+https://video.tv.adobe.com/v/3429998?end=nothing&learn=on | Watch the video Adobe General Terms
 We have updated our General Terms of Use to make the language easier to understand. Please watch the explainer video and read the terms below to learn about the clarifications we have made to more clearly describe how we are treating and protecting your data. Over the next several weeks we will roll these terms out to customers globally.
-Watch the video
+Watch the video | Watch the video Adobe General Terms
 Adobe General Terms of Use
 Published October 3, 2025. Effective as of October 3, 2025. These General Terms of Use replace and supersede all prior versions.
+#E1E1E1
 Our General Terms of Use is a legal agreement between you and Adobe. We know this language can seem complex, so as you’re reading through our terms, we are providing summaries as a helpful overview of what you’re agreeing to. Only the terms themselves are legally binding, not these summaries.
 In any business relationship, you agree to a set of terms. These terms are our agreement with you for the use of Adobe products.
 style
@@ -65,6 +57,7 @@ layout
 1 | 2
 1. Your Agreement with Adobe
 1.1 Choice of Law and Contracting Entity
+#E1E1E1
 Section 1.1 means:
 The country and law(s) that this agreement falls under depends on where you live.
 style
@@ -79,6 +72,7 @@ we
 our
 ” mean either Adobe Inc., Adobe Systems Software Ireland Limited, Adobe Systems Pty Ltd., or Adobe KK, as applicable.
 1.2 Product Specific Terms
+#E1E1E1
 Section 1.2 means:
 These are general terms of use that apply to all of Adobe’s products. However, there may also be terms that are specific to the products you use. Product-specific terms always override the general terms.
 style
@@ -113,6 +107,7 @@ Photoshop Express
 Project Aqua
 Software
 1.3 Business Users
+#E1E1E1
 Section 1.3 means:
 If you’re using an individual Adobe plan, you have control over your content and the work you create. If you’re using a business plan, your organization has access to and control over your work.
 style
@@ -137,6 +132,7 @@ As a Personal User or a Business User, you may create an Adobe account using an 
 https://adobe.com/go/business-storage-helpx
 . Adobe may share information about the Business, such as name and email address of the administrator, to a Business User.
 1.5 Updates to Terms
+#E1E1E1
 Section 1.5 means:
 Sometimes change happens. We’ll notify you when there are important changes to these terms or to your subscription.
 style
@@ -150,6 +146,7 @@ http://www.adobe.com/go/privacy)
 https://www.adobe.com/privacy/opt-out.html
 .
 2.2 Our Access to Your Content
+#E1E1E1
 Section 2.2 means:
 No one but you owns your content, but we need access to your content as necessary to operate Adobe applications and services. We limit our access to very specific purposes.
 We review content that is on our servers to screen for certain types of illegal content (such as child sexual abuse material), or other abusive content or behavior (for example, patterns of activity that indicate spam or phishing). We start this process with an automated machine-driven review, but if our automated systems or another user flags an issue, a person may review the content to confirm if it is illegal or abusive.
@@ -175,4 +172,4 @@ and usage data (
 adobe.com/go/usagedatafaq)
 . Insights from Content Analytics may be used to inform our marketing to you, subject to your opt-out and consent rights regarding our marketing.
 (E) Public and Shared Cloud Content.
-For Cloud Content on our Adobe Stock platform and other public-facing platforms like Behance and Lightroom communities, all Cloud Content is subject to review for intellectual property issues and safety issues (for example, violence and nudity). If you choose to share your Cloud Content with others using our Software and Services, we may automatically review this shared Cloud Content to flag abusive behavior (such a
+For Cloud Content on our Adobe Stock platform and other public-facing platforms like Behance and {{lightroom}} communities, all Cloud Content is subject to review for intellectual property issues and safety issues (for example, violence and nudity). If you choose to share your Cloud Content with others using our Software and Services, we may automatically review this shared Cloud Content to flag abusive behavior (such

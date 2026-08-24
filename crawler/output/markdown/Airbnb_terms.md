@@ -2,11 +2,9 @@
 
 Source: https://www.airbnb.com/terms
 
-Terms of Service - Airbnb Help Center
+Airbnb: Vacation Rentals, Cabins, Beach Houses, Unique Homes & Experiences
 We’re sorry, some parts of the Airbnb website don’t work properly without JavaScript enabled.
 Help Center
-Search
-Suggestions will show after typing in the search input. Use the up and down arrows to review. Use enter to select. If the selection is a phrase, that phrase will be submitted to search. If the suggestion is a link, the browser will navigate to that page.
 Legal terms
 Terms of Service
 If your country of residence or establishment is within the European Economic Area (“
@@ -202,4 +200,4 @@ Host Terms
 As a Host, Airbnb offers you the right to use the Airbnb Platform in accordance with these Terms to share your Accommodation, Service, Experience, or other Host Service with our vibrant community of Guests - and earn money doing it. It’s easy to create a Listing and you are in control of how you host - set your price, availability, and rules for each Listing.
 4.2 Contracting with Guests
 .
-When you accept a booking request, or receive a booking confirmation through the A
+When you accept a booking request, or receive a booking confirmation through the Airbnb Platform, you are entering into a contract directly with the Guest, and are responsible for delivering the Host Service under the terms and at the price specified in your Listing. You are also agreeing to pay applicable

@@ -44,31 +44,6 @@ Returns
 & Orders
 0
 Cart
-International Shopping Transition Alert
-We're showing you items that ship to
-Malaysia
-. To see items that ship to a different country, change your delivery address.
-Dismiss
-Change Address
-Sign in
-New customer?
-Start here.
-Your Lists
-Create a List
-Find a List or Registry
-Your Account
-Account
-Orders
-Recommendations
-Browsing History
-Your Shopping preferences
-Watchlist
-Video Purchases & Rentals
-Kindle Unlimited
-Content & Devices
-Subscribe & Save Items
-Memberships & Subscriptions
-Music Library
 All
 Today's Deals
 Customer Service
@@ -288,3 +263,11 @@ If you have any questions as to how we collect and use your personal information
             please contact our
 Customer Service
 . Many of our Amazon Services also include settings that provide you with options
+            as to how your information is being used.
+As described above, you can choose not to provide certain information, but then you
+                  might not be able to take advantage of many of the Amazon Services.
+You can add or update certain information on pages such as those referenced in
+What Information Can I Access?
+. When you update information, we usually keep a copy of the prior version for our
+                  records.
+If you do not want to receive email or other comm

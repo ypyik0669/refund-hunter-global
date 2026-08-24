@@ -3,9 +3,6 @@
 Source: https://www.spotify.com/us/legal/end-user-agreement/
 
 Terms and Conditions of Use - Spotify
-Estados Unidos (Español)
-✕
-Close
 Skip to content
 Spotify - Home
 Menu
@@ -132,4 +129,4 @@ Export control and sanctions
 You represent and warrant that you are (1) not located in, organized under the laws of, or ordinarily resident in any country or territory subject to territorial sanctions (collectively "
 Sanctioned Country
 "), nor are you owned or acting on behalf of a government subject to asset-blocking sanctions or any person or entity organized, located or ordinarily resident in a Sanctioned Country; and (2) not a person identified on, or more than 50% owned or controlled, directly or indirectly, by or acting on behalf or at the direction of any entity identified on, E.U., U.K., or U.S., or other applicable government restricted party lists, such as the consolidated list of persons, groups and entities subject to EU financial sanctions, or the UK Consolidated List, or Specifically Designated Nationals list maintained by the US government.
-Spotify's products may be subject to export control and economic sanctions laws of the European Union, the United Kingdom, the United
+Spotify's products may be subject to export control and economic sanctions laws of the European Union, the United Kingdom, the United States, including but not limite

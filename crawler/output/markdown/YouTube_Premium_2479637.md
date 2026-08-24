@@ -6,6 +6,13 @@ Learn about Google Play refund policies - Google Play Help
 Skip to main content
 Google Play Help
 Sign in
+Google Help
+Help Center
+Community
+Google Play
+Privacy Policy
+Google Play Terms of Service
+Submit feedback
 Send feedback on...
 This help content & information
 General Help Center experience
@@ -65,60 +72,30 @@ European Economic Area and United Kingdom refund policies
 Related resources
 Request a refund on Google Play
 Check the status of a refund request for Google Play
-Give feedback about this article
-Choose a section to give feedback on
 Need more help?
 Try these next steps:
-Post to the help community
-Get answers from community members
 Contact us
 Tell us more and we’ll help you get there
+Post to the help community
+Get answers from community members
 true
 Search
 Clear search
 Close search
-Main menu
 Google apps
-396661543677312531
+Main menu
+1951562398678267012
 true
 Search Help Center
 false
 true
 true
 true
-Google Help
-Help Center
-Community
-Google Play
-Privacy Policy
-Google Play Terms of Service
-Submit feedback
 true
 true
 84680
+true
 false
-false
-What is the issue with this selection?
-What is the issue with this selection?
-Inaccurate - doesn't match what I see in the product
-Hard to understand - unclear or translation is wrong
-Missing info - relevant but not comprehensive
-Irrelevant - doesn’t match the title and / or my expectations
-Minor errors - formatting issues, typos, and / or broken links
-Other suggestions - ideas to improve the content
-Share additional info or suggestions
-​
-​
-Do not share any personal info
-Cancel
-Submit
-By continuing, you agree Google uses your answers,
-account & system info
-to improve services, per our
-Privacy
-&
-Terms
-.
 false
 false
 false

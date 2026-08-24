@@ -8,10 +8,6 @@ Search for articles...
 Sharing Your Activities and Routes With a Strava Embed
 Updated this week
 Table of contents
-Embedding Individual Activities
-Embedding a Route
-Embedding a Profile Summary or Activity Feed
-FAQs
 Individual activities, routes, a list of your recent rides or runs, or a summary of your last week of running or riding can be embedded on your blog or webpage.
 Embedding Individual Activities
 Your
@@ -105,7 +101,3 @@ Did this answer your question?
 😐
 😃
 Table of contents
-Embedding Individual Activities
-Embedding a Route
-Embedding a Profile Summary or Activity Feed
-FAQs

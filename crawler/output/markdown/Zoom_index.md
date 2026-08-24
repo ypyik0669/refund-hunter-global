@@ -11,6 +11,8 @@ Get in touch
 +1.888.799.9666
 Sign Up Free
 Contact Sales
+Contact Sales
+What's New
 Download on the
 App Store
 Get it on
@@ -41,6 +43,19 @@ Sign In
 Support
 Contact Sales
 Sign Up Free
+What's New
+Open user profile menu
+My Account
+Settings
+Add Account
+Web App
+Sign Out
+Install on desktop
+Download center
+Download on the
+App Store
+Get it on
+Google Play
 Zoom Workplace
 View All
 Meetings
@@ -78,7 +93,6 @@ Overview
 Video SDK
 Co-Browse
 Contact Sales
-0
 By industry
 Education
 Financial Services
@@ -202,4 +216,4 @@ You are responsible for compliance with all Laws governing the monitoring or rec
 8. PROHIBITED USES
 You agree that you will not, and will not permit any End Users to, directly or indirectly: (i) use the Services or Software in violation of our
 Acceptable Use Guidelines
-(which are hereby incorporated into this Agreement); (ii) modify, customize, disassemble, decompile, prepare derivative works of, create improvements, derive innovations from, reverse engineer, or attempt to gain access to any underlying technology of the Services or Software, including any source code, process, data set or database, management tool, development tool, server or hosting site; (iii) knowingly or negligently use the Services or Software in a way that abuses, interferes with, or disrupts Zoom’s networks, your account, Host rights, or any other user rights, or the Services; (iv) engage in activity that is illegal under applicable Law, fraudulent, false, or misleading; (v) transmit through the Services or Software any material that may infringe, misappropriate, or violate the Proprietary Rights of third parties; (vi) build or benchmark a competitive product or service, or copy any features, functions, or graphics of the Services or Software; (vii) use the Services or Software for the development, production, or marketing of a servi
+(which are hereby incorporated into this Agreement); (ii) modify, customize, disassemble, decompile, prepare derivative works of, create improvements, derive innovations from, reverse engineer, or attempt to gain access to any underlying technology of the Services or Software, including any source code, process, data set or database, management tool, development tool, server or hosting site; (iii) knowingly or negligently use the Services or Software in a way that abuses, interferes with, or disrupts Zoom’s networks, your account, Host rights, or any other user rights, or the Services; (iv) engage in activity that is illegal under applicable Law, fraudulent, false, or misleading; (v) transmit through the Services or Software any material that may infringe, misappropriate, or violate the Proprietary Rights of third parties; (vi) build or benchmark a competit
