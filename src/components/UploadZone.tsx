@@ -9,12 +9,34 @@ export default function UploadZone({ onResult }: { onResult: (a: RefundAnalysis,
   const [dragOver, setDragOver] = useState(false);
   const [fileName, setFileName] = useState<string | undefined>();
 
-  const handleAnalyze = useCallback(() => {
+  const [visionLoading, setVisionLoading] = useState(false);
+
+  const handleAnalyze = useCallback(async () => {
     if (!text.trim() && !fileName) return;
-    const analysis = analyzeRefund(text, fileName);
+    // 若有图，先走Vision API (Gemini 3.7 Flash / GPT-5.6 Luna)
+    let effectiveText = text;
+    let effectiveFileName = fileName;
+    const fileInput = document.querySelector<HTMLInputElement>('input[type="file"]')?.files?.[0];
+    if (fileInput && fileInput.size > 0 && fileInput.type.startsWith("image")) {
+      setVisionLoading(true);
+      try {
+        const fd = new FormData();
+        fd.append("file", fileInput);
+        const r = await fetch("/api/vision", { method: "POST", body: fd });
+        if (r.ok) {
+          const j = (await r.json()) as { ocr?: { merchant?: string; amount?: string; rawText?: string } };
+          if (j.ocr) {
+            const o = j.ocr;
+            effectiveText = `${o.merchant || ""} ${o.amount || ""} ${o.rawText || text}`.trim() || text;
+            effectiveFileName = o.merchant || fileName;
+          }
+        }
+      } catch {}
+      setVisionLoading(false);
+    }
+    const analysis = analyzeRefund(effectiveText, effectiveFileName);
     const tpl = generateTemplates(analysis);
     onResult(analysis, tpl);
-    // persist for result page
     localStorage.setItem("rh_last", JSON.stringify({ analysis, tpl }));
   }, [text, fileName, onResult]);
 
@@ -81,11 +103,12 @@ export default function UploadZone({ onResult }: { onResult: (a: RefundAnalysis,
 
       <button
         onClick={handleAnalyze}
-        disabled={!text.trim() && !fileName}
+        disabled={(!text.trim() && !fileName) || visionLoading}
         className="mt-5 w-full bg-emerald-500 hover:bg-emerald-600 disabled:bg-zinc-300 disabled:cursor-not-allowed text-white font-semibold py-3.5 rounded-xl transition"
       >
-        🔍 Analyze — Find my refund chance
+        {visionLoading ? "👁️ Gemini 3.7 Flash reading image..." : "🔍 Analyze — Find my refund chance"}
       </button>
+      <p className="text-xs text-center text-zinc-500 mt-1">Vision: Gemini 3.7 Flash $0.75/1M (no key → filename fallback)</p>
       <p className="text-xs text-center text-zinc-500 mt-2">Free to check • No signup • Data deleted in 7 days</p>
     </div>
   );

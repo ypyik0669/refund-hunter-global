@@ -148,45 +148,69 @@ export async function discoverPolicy(merchant: string): Promise<DiscoveredPolicy
     };
   }
 
-  // 5. OpenRouter ox-alpha 生成兜底（有Key时，冷门也能95%+）
-  const orKey = process.env.OPENROUTER_API_KEY;
-  if (orKey) {
-    try {
-      const orRes = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-        method: "POST",
-        headers: { Authorization: `Bearer ${orKey}`, "Content-Type": "application/json" },
-        body: JSON.stringify({
-          model: "stealth/ox-alpha",
-          messages: [{ role: "user", content: `Provide refund policy for "${m}" as JSON: {"refund_days":14,"refundable":true,"conditions":["within window"],"contact":"support@${m.toLowerCase().replace(/[^a-z0-9]/g,"")}.com","summary":"Refund within 14 days..."}. Return ONLY JSON.` }],
-          max_tokens: 300,
-          temperature: 0.2,
-        }),
-        signal: AbortSignal.timeout(6000),
-      });
-      if (orRes.ok) {
-        const j = (await orRes.json()) as { choices: { message: { content: string | null; reasoning?: string } }[] };
-        const content = j.choices?.[0]?.message?.content || j.choices?.[0]?.message?.reasoning || "";
-        const match = content.match(/\{[\s\S]*\}/);
-        if (match) {
-          const parsed = JSON.parse(match[0]);
-          const summary = parsed.summary || `${m} refund within ${parsed.refund_days || 14} days`;
-          const markdown = `# ${m} Refund Policy (OpenRouter ox-alpha generated)\n\n${summary}\n\nContact: ${parsed.contact || ""}\nRefund days: ${parsed.refund_days || 14}\nConditions: ${(parsed.conditions || []).join(", ")}\nSource: https://${m.toLowerCase().replace(/\s+/g, "")}.com/terms (generated)`;
-          return {
-            merchant: m,
-            url: `https://${m.toLowerCase().replace(/\s+/g, "")}.com/terms`,
-            title: `${m} Policy (ox-alpha)`,
-            markdown: markdown.slice(0, 8000),
-            engine: "openrouter-ox-alpha",
-            extracted: {
-              refund_days: parsed.refund_days ?? 14,
-              refundable: parsed.refundable ?? true,
-              conditions: parsed.conditions ?? ["within window"],
-              contact: parsed.contact ?? "",
-            },
-          };
+  // 5. Gemini + OpenAI 生成兜底（有Key时，冷门也能95%+）— 只用 Gemini/OpenAI，不用Anthropic
+  const gemKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY;
+  const openKey = process.env.OPENAI_API_KEY || process.env.OPENROUTER_API_KEY;
+  // 优先 Gemini 3.7 Flash $0.75/$3.75，次 OpenAI GPT-5.6
+  const tryLLM = async (prompt: string): Promise<string | null> => {
+    if (gemKey) {
+      try {
+        const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.7-flash:generateContent?key=${gemKey}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { maxOutputTokens: 300, temperature: 0.2 } }),
+          signal: AbortSignal.timeout(6000),
+        });
+        if (r.ok) {
+          const j = (await r.json()) as { candidates?: { content?: { parts?: { text?: string }[] } }[] };
+          const t = j.candidates?.[0]?.content?.parts?.[0]?.text;
+          if (t) return t;
         }
-      }
-    } catch {}
+      } catch {}
+    }
+    if (openKey) {
+      const base = process.env.OPENROUTER_API_KEY ? "https://openrouter.ai/api/v1" : "https://api.openai.com/v1";
+      const model = process.env.OPENROUTER_API_KEY ? "openai/gpt-5.6-terra" : "gpt-5.6-terra";
+      try {
+        const r = await fetch(`${base}/chat/completions`, {
+          method: "POST",
+          headers: { Authorization: `Bearer ${openKey}`, "Content-Type": "application/json" },
+          body: JSON.stringify({ model, messages: [{ role: "user", content: prompt }], max_tokens: 300, temperature: 0.2 }),
+          signal: AbortSignal.timeout(6000),
+        });
+        if (r.ok) {
+          const j = (await r.json()) as { choices: { message: { content: string | null } }[] };
+          return j.choices?.[0]?.message?.content || null;
+        }
+      } catch {}
+    }
+    return null;
+  };
+
+  const prompt = `Provide refund policy for "${m}" as JSON: {"refund_days":14,"refundable":true,"conditions":["within window"],"contact":"support@${m.toLowerCase().replace(/[^a-z0-9]/g, "")}.com","summary":"Refund within 14 days..."}. Return ONLY JSON.`;
+  const content = await tryLLM(prompt);
+  if (content) {
+    const match = content.match(/\{[\s\S]*\}/);
+    if (match) {
+      try {
+        const parsed = JSON.parse(match[0]);
+        const summary = parsed.summary || `${m} refund within ${parsed.refund_days || 14} days`;
+        const markdown = `# ${m} Refund Policy (Gemini/OpenAI generated)\n\n${summary}\n\nContact: ${parsed.contact || ""}\nRefund days: ${parsed.refund_days || 14}\nConditions: ${(parsed.conditions || []).join(", ")}\nSource: https://${m.toLowerCase().replace(/\s+/g, "")}.com/terms (generated)`;
+        return {
+          merchant: m,
+          url: `https://${m.toLowerCase().replace(/\s+/g, "")}.com/terms`,
+          title: `${m} Policy (llm)`,
+          markdown: markdown.slice(0, 8000),
+          engine: gemKey ? "gemini-3.7-flash" : "gpt-5.6-terra",
+          extracted: {
+            refund_days: parsed.refund_days ?? 14,
+            refundable: parsed.refundable ?? true,
+            conditions: parsed.conditions ?? ["within window"],
+            contact: parsed.contact ?? "",
+          },
+        };
+      } catch {}
+    }
   }
 
   return null;
