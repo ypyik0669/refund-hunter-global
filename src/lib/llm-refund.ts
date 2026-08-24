@@ -97,15 +97,10 @@ export async function llmDiscoverWithQueries(problem: LLMProblem): Promise<{ mar
     return { markdown: cached.markdown, url: cached.url, engine: "cache-119" };
   }
 
-  // 用 LLM 生成的 searchQueries 去实时搜
-  for (const q of problem.searchQueries.slice(0, 2)) {
-    // 调 discoverPolicy 时把 query 当 merchant 传，利用其 Exa/Firecrawl 能力
-    // 但 discoverPolicy 内部是 heuristic+jina，若有 EXA_KEY 会走搜索
-    // 这里我们直接调 discoverPolicy
-    const discovered = await discoverPolicy(problem.merchant);
-    if (discovered && discovered.markdown.length > 400) {
-      return { markdown: discovered.markdown, url: discovered.url, engine: discovered.engine };
-    }
+  // 用 LLM 生成的 searchQueries 去实时搜（传给 discoverPolicy 的通用搜索）
+  const discovered = await discoverPolicy(problem.merchant, { queries: problem.searchQueries });
+  if (discovered && discovered.markdown.length > 400) {
+    return { markdown: discovered.markdown, url: discovered.url, engine: discovered.engine };
   }
 
   // 兜底：用 LLM 生成虚拟政策（保证 0 FAIL）

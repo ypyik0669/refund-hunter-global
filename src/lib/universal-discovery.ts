@@ -111,11 +111,8 @@ export async function universalSearchRead(queries: string[], maxUrls = 6): Promi
     }
     if (allUrls.length >= maxUrls) break;
   }
-  // 并行Jina读，优先官方来源，论坛/商店仅兜底
+  // 并行Jina读，只接受官方来源（论坛/商店/社媒永远不算政策来源，宁缺毋滥）
   const results = await Promise.all(allUrls.slice(0, maxUrls).map(async (url) => ({ url, official: isOfficial(url), md: await jinaRead(url, 5000) })));
-  const ok = results.filter((r) => r.md.length > 400 && REFUND_RE.test(r.md) && !BAD_RE.test(r.md));
-  const official = ok.find((r) => r.official);
-  if (official) return { url: official.url, markdown: official.md };
-  const any = ok[0];
-  return any ? { url: any.url, markdown: any.md } : null;
+  const ok = results.find((r) => r.official && r.md.length > 400 && REFUND_RE.test(r.md) && !BAD_RE.test(r.md));
+  return ok ? { url: ok.url, markdown: ok.md } : null;
 }

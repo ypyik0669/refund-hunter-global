@@ -67,9 +67,15 @@ function extractRefundFields(markdown: string) {
   return { refund_days, refundable, conditions, contact };
 }
 
-export async function discoverPolicy(merchant: string): Promise<DiscoveredPolicy | null> {
+// 官网首页（浏览器渲染用）
+function found0Url(merchant: string): string {
+  return `https://${merchant.toLowerCase().replace(/[^a-z0-9]/g, "")}.com`;
+}
+
+export async function discoverPolicy(merchant: string, opts?: { queries?: string[]; domains?: string[] }): Promise<DiscoveredPolicy | null> {
   const m = merchant.trim();
   if (!m || m === "Unknown Merchant") return null;
+  const extraQueries = opts?.queries || [];
 
   // 1. Exa搜索（若有Key）—— 对应Agent-Reach
   const exaKey = process.env.EXA_API_KEY;
@@ -131,7 +137,7 @@ export async function discoverPolicy(merchant: string): Promise<DiscoveredPolicy
   // 2.5 Universal: DDG免费搜索（零Key，全世界任意公司）— 搜索优先于猜URL
   try {
     const found = await Promise.race([
-      universalSearchRead([`${m} refund policy`, `${m} refund policy cancellation terms`, /[\u4e00-\u9fff]/.test(m) ? `${m} 退款政策` : `${m} how to get refund`]),
+      universalSearchRead([...extraQueries, `${m} refund policy`, `${m} refund policy cancellation terms`, /[\u4e00-\u9fff]/.test(m) ? `${m} 退款政策` : `${m} how to get refund`]),
       new Promise<null>((r) => setTimeout(() => r(null), 10000)),
     ]);
     if (found && found.markdown.length > 400) {
@@ -163,6 +169,28 @@ export async function discoverPolicy(merchant: string): Promise<DiscoveredPolicy
       };
     }
   }
+
+  // 3.5 真浏览器渲染 — SPA/JS重站Jina拿壳时，Playwright Chromium直接渲染取正文
+  try {
+    const { renderPage } = await import("./browser-render");
+    const renderTargets = [found0Url(m), ...urls].filter(Boolean).slice(0, 4);
+    for (const url of renderTargets) {
+      const rendered = await Promise.race([
+        renderPage(url),
+        new Promise<null>((r) => setTimeout(() => r(null), 14000)),
+      ]);
+      if (rendered && rendered.text.length > 400 && /refund|return|terms|退款|cancellation/i.test(rendered.text)) {
+        return {
+          merchant: m,
+          url: rendered.url,
+          title: rendered.title || `${m} Policy`,
+          markdown: `# ${rendered.title || m}\n\nURL: ${rendered.url}\n\n${rendered.text.slice(0, 8000)}`,
+          engine: "browser-render",
+          extracted: extractRefundFields(rendered.text),
+        };
+      }
+    }
+  } catch {}
 
   // 4. 最后兜底：直接Jina读 merchant.com 首页（仅当包含退款关键词才算命中）
   const fallback = `https://${m.toLowerCase().replace(/\s+/g, "")}.com`;
