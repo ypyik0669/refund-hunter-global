@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { findPolicy } from "@/lib/refund-knowledge";
+import { findPolicy, isStale, getStaleDays } from "@/lib/refund-knowledge";
 import { discoverPolicy } from "@/lib/policy-discovery";
 
 // 内存缓存（生产应换Supabase/Redis）
@@ -18,12 +18,38 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ ...(hit.data as object), cached: true });
   }
 
-  // 1. 先查本地31家
+  // 1. 先查本地119家 — 但 stale 必须活验证，不可直接信
   const local = findPolicy(merchant);
   if (local && local.markdown.length > 500) {
-    const data = { policy: local, source: "local", discovered: false };
-    cache.set(key, { data, ts: Date.now() });
-    return NextResponse.json(data);
+    const stale = isStale(local);
+    const staleDays = getStaleDays(local);
+    if (!stale) {
+      // 新鲜：直接返回
+      const data = { policy: local, source: "local", discovered: false, stale: false, staleDays };
+      cache.set(key, { data, ts: Date.now() });
+      return NextResponse.json(data);
+    }
+    // 过期：先返回缓存但标记 stale，同时后台活验证（不阻塞）
+    const staleData = {
+      policy: local,
+      source: "local-stale",
+      discovered: false,
+      stale: true,
+      staleDays,
+      warning: `Cached ${staleDays} days ago, may be outdated. Live verification in background. Always check official ${local.url}`,
+      verifyUrl: local.url,
+    };
+    // 后台活验证（fire-and-forget）
+    (async () => {
+      try {
+        const live = await Promise.race([discoverPolicy(merchant), new Promise<null>((r) => setTimeout(() => r(null), 8000))]);
+        if (live && live.markdown.length > 400) {
+          cache.set(key, { data: { policy: live, source: live.engine, discovered: true, stale: false }, ts: Date.now() });
+        }
+      } catch {}
+    })();
+    cache.set(key, { data: staleData, ts: Date.now() });
+    return NextResponse.json(staleData);
   }
 
   // 2. 冷门：实时发现（Jina/Exa/firecrawl）— 8秒超时兜底，错误也兜底为generic

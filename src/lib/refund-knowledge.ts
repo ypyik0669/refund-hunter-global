@@ -45,10 +45,27 @@ export function getAllPolicies(): Policy[] {
   return list;
 }
 
+export const POLICY_TTL_DAYS = 7; // 缓存7天后视为过期，活验证
+
+export function isStale(policy: Policy, ttlDays = POLICY_TTL_DAYS): boolean {
+  const crawled = new Date(policy.crawled_at).getTime();
+  if (isNaN(crawled)) return true;
+  return Date.now() - crawled > ttlDays * 24 * 60 * 60 * 1000;
+}
+
+export function getStaleDays(policy: Policy): number {
+  const crawled = new Date(policy.crawled_at).getTime();
+  if (isNaN(crawled)) return 999;
+  return Math.floor((Date.now() - crawled) / (24 * 60 * 60 * 1000));
+}
+
 export function getPolicyStats() {
+  const stale = list.filter((p) => isStale(p)).length;
   return {
     total: list.length,
     refundable: list.filter((p) => p.extracted.refundable).length,
+    stale,
+    fresh: list.length - stale,
     byCategory: list.reduce<Record<string, number>>((acc, p) => {
       acc[p.category] = (acc[p.category] || 0) + 1;
       return acc;

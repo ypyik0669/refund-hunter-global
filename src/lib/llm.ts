@@ -54,11 +54,14 @@ export async function llmGenerate(prompt: string, role: LLMRole = "generate"): P
   } else if (role === "extract") {
     candidates.push({ fn: () => callGemini("gemini-3.7-flash", prompt, 500), model: "gemini-3.7-flash", engine: "gemini-extract" });
     candidates.push({ fn: () => callOpenAI("gpt-5.6-terra", prompt, 500), model: "gpt-5.6-terra", engine: "openai-extract" });
+    candidates.push({ fn: () => callOpenAI("stealth/ox-alpha", prompt, 500), model: "stealth/ox-alpha", engine: "ox-alpha-extract" });
+    candidates.push({ fn: () => callOpenAI("nvidia/nemotron-3.5-lightning:free", prompt, 500), model: "nvidia/nemotron-3.5-lightning:free", engine: "nemotron-extract" });
   } else if (role === "generate") {
     // 主：Gemini Flash（文档强 60% AnalystAgent + $0.75/$3.75），备：GPT-5.6 Terra（均衡 $2/$12，DeepSWE 69.6）
     candidates.push({ fn: () => callGemini("gemini-3.7-flash", prompt, 800), model: "gemini-3.7-flash", engine: "gemini-generate" });
     candidates.push({ fn: () => callOpenAI("gpt-5.6-terra", prompt, 800), model: "gpt-5.6-terra", engine: "openai-generate" });
-    candidates.push({ fn: () => callOpenAI("gpt-5.6-sol", prompt, 800), model: "gpt-5.6-sol", engine: "openai-sol" });
+    candidates.push({ fn: () => callOpenAI("stealth/ox-alpha", prompt, 800), model: "stealth/ox-alpha", engine: "ox-alpha-generate" });
+    candidates.push({ fn: () => callOpenAI("nvidia/nemotron-3.5-lightning:free", prompt, 800), model: "nvidia/nemotron-3.5-lightning:free", engine: "nemotron-generate" });
   } else if (role === "appeal") {
     // 二封用更强的 Sol
     candidates.push({ fn: () => callOpenAI("gpt-5.6-sol", prompt, 800), model: "gpt-5.6-sol", engine: "openai-appeal" });

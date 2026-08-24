@@ -34,6 +34,23 @@ export default function UploadZone({ onResult }: { onResult: (a: RefundAnalysis,
       } catch {}
       setVisionLoading(false);
     }
+    // LLM-first：调 /api/analyze（Gemini/OpenAI 找问题 + 4框架爬），失败回退本地
+    try {
+      const r = await fetch("/api/analyze", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text: effectiveText, fileName: effectiveFileName }),
+      });
+      if (r.ok) {
+        const j = (await r.json()) as { analysis: RefundAnalysis; tpl: ReturnType<typeof generateTemplates>; problem?: { searchQueries?: string[] }; discovered?: { engine: string } };
+        if (j.analysis && j.tpl) {
+          onResult(j.analysis, j.tpl);
+          localStorage.setItem("rh_last", JSON.stringify(j));
+          return;
+        }
+      }
+    } catch {}
+    // 回退本地规则
     const analysis = analyzeRefund(effectiveText, effectiveFileName);
     const tpl = generateTemplates(analysis);
     onResult(analysis, tpl);
