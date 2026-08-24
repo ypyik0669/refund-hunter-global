@@ -123,9 +123,9 @@ export default function UploadZone({ onResult }: { onResult: (a: RefundAnalysis,
         disabled={(!text.trim() && !fileName) || visionLoading}
         className="mt-5 w-full bg-emerald-500 hover:bg-emerald-600 disabled:bg-zinc-300 disabled:cursor-not-allowed text-white font-semibold py-3.5 rounded-xl transition"
       >
-        {visionLoading ? "👁️ Gemini 3.7 Flash reading image..." : "🔍 Analyze — Find my refund chance"}
+        {visionLoading ? "👁️ GPT-5.6 Luna reading image..." : "🔍 Analyze — Find my refund chance"}
       </button>
-      <p className="text-xs text-center text-zinc-500 mt-1">Vision: Gemini 3.7 Flash $0.75/1M (no key → filename fallback)</p>
+      <p className="text-xs text-center text-zinc-500 mt-1">Vision: GPT-5.6 Luna (no key → filename fallback)</p>
       <p className="text-xs text-center text-zinc-500 mt-2">Free to check • No signup • Data deleted in 7 days</p>
     </div>
   );

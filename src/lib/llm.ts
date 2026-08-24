@@ -1,76 +1,84 @@
-// 统一 LLM 入口 — 只用 Gemini + OpenAI，去掉 Anthropic
-// 优先级：Gemini 3.7 Flash 主（$0.75/$3.75，60% AnalystAgent，340tps）→ GPT-5.6 Terra/Sol 备
+// 统一 LLM 入口 — 全 GPT-5.6 家族（Luna/Terra/Sol），无 Gemini
+// 通过 OPENAI_BASE_URL 指向任意 OpenAI 兼容代理（官方/中转面板）
 
 export type LLMRole = "vision" | "extract" | "generate" | "appeal";
 
 export interface LLMResult { text: string; model: string; engine: string }
 
-function getEnv(name: string): string | undefined {
-  return (process.env[name] || (globalThis as unknown as { process?: { env?: Record<string, string> } })?.process?.env?.[name])?.trim();
+const BASE = () => (envGet("RH_OPENAI_BASE_URL") || envGet("OPENAI_BASE_URL") || "https://api.openai.com/v1").replace(/\/+$/, "");
+const KEY = () => envGet("RH_OPENAI_API_KEY") || envGet("OPENAI_API_KEY") || "";
+
+// 运行时 .env.local 兜底（Next某些环境不注入时直接读文件）
+import fs from "fs";
+import path from "path";
+let dotenvCache: Record<string, string> | null = null;
+export function envGet(name: string): string | undefined {
+  if (process.env[name]) return process.env[name];
+  if (!dotenvCache) {
+    try {
+      const raw = fs.readFileSync(path.join(process.cwd(), ".env.local"), "utf-8").replace(/^\uFEFF/, "");
+      dotenvCache = {};
+      for (const line of raw.split(/\r?\n/)) {
+        const t = line.trim();
+        if (!t || t.startsWith("#")) continue;
+        const eq = t.indexOf("=");
+        if (eq > 0) dotenvCache[t.slice(0, eq).trim()] = t.slice(eq + 1).trim();
+      }
+    } catch {
+      dotenvCache = {};
+    }
+  }
+  return dotenvCache[name];
 }
 
-// OpenAI 兼容调用（OpenAI 直连 或 OpenRouter 中转）
-async function callOpenAI(model: string, prompt: string, maxTokens = 800): Promise<string | null> {
-  const key = getEnv("OPENAI_API_KEY") || getEnv("OPENROUTER_API_KEY");
+async function callOpenAI(model: string, messages: unknown[], maxTokens: number, timeoutMs = 15000): Promise<string | null> {
+  const key = KEY();
   if (!key) return null;
-  const base = getEnv("OPENROUTER_API_KEY") ? (getEnv("OPENROUTER_BASE_URL") || "https://openrouter.ai/api/v1") : "https://api.openai.com/v1";
   try {
-    const r = await fetch(`${base}/chat/completions`, {
+    const r = await fetch(`${BASE()}/chat/completions`, {
       method: "POST",
       headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
-      body: JSON.stringify({ model, messages: [{ role: "user", content: prompt }], max_tokens: maxTokens, temperature: 0.2 }),
-      signal: AbortSignal.timeout(10000),
+      body: JSON.stringify({ model, messages, max_tokens: maxTokens, temperature: 0.2 }),
+      signal: AbortSignal.timeout(timeoutMs),
     });
     if (!r.ok) return null;
     const j = (await r.json()) as { choices: { message: { content: string | null; reasoning?: string } }[] };
     return j.choices?.[0]?.message?.content || j.choices?.[0]?.message?.reasoning || null;
-  } catch { return null; }
+  } catch {
+    return null;
+  }
 }
 
-async function callGemini(model: string, prompt: string, maxTokens = 800): Promise<string | null> {
-  const key = getEnv("GEMINI_API_KEY") || getEnv("GOOGLE_API_KEY");
-  if (!key) return null;
-  // Gemini API: https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key=...
-  try {
-    const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${key}`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { maxOutputTokens: maxTokens, temperature: 0.2 } }),
-      signal: AbortSignal.timeout(10000),
-    });
-    if (!r.ok) return null;
-    const j = (await r.json()) as { candidates?: { content?: { parts?: { text?: string }[] } }[] };
-    return j.candidates?.[0]?.content?.parts?.[0]?.text || null;
-  } catch { return null; }
-}
+const MAX_TOKENS: Record<LLMRole, number> = { vision: 500, extract: 600, generate: 900, appeal: 900 };
+// 角色 → 模型链（0.3x倍率下的最优性价比路由）
+const CHAIN: Record<LLMRole, string[]> = {
+  vision: ["gpt-5.6-luna"],
+  extract: ["gpt-5.6-luna", "gpt-5.6-terra"],
+  generate: ["gpt-5.6-terra", "gpt-5.6-sol"],
+  appeal: ["gpt-5.6-sol", "gpt-5.6-terra"],
+};
 
 export async function llmGenerate(prompt: string, role: LLMRole = "generate"): Promise<LLMResult | null> {
-  // 角色路由：vision/extract 用 Flash，generate 用 Terra/Sol，appeal 用 Sol
-  const candidates: { fn: () => Promise<string | null>; model: string; engine: string }[] = [];
-
-  if (role === "vision") {
-    candidates.push({ fn: () => callGemini("gemini-3.7-flash", prompt, 400), model: "gemini-3.7-flash", engine: "gemini-vision" });
-    candidates.push({ fn: () => callOpenAI("gpt-5.6-luna", prompt, 400), model: "gpt-5.6-luna", engine: "openai-vision" });
-  } else if (role === "extract") {
-    candidates.push({ fn: () => callGemini("gemini-3.7-flash", prompt, 500), model: "gemini-3.7-flash", engine: "gemini-extract" });
-    candidates.push({ fn: () => callOpenAI("gpt-5.6-terra", prompt, 500), model: "gpt-5.6-terra", engine: "openai-extract" });
-    candidates.push({ fn: () => callOpenAI("stealth/ox-alpha", prompt, 500), model: "stealth/ox-alpha", engine: "ox-alpha-extract" });
-    candidates.push({ fn: () => callOpenAI("nvidia/nemotron-3.5-lightning:free", prompt, 500), model: "nvidia/nemotron-3.5-lightning:free", engine: "nemotron-extract" });
-  } else if (role === "generate") {
-    // 主：Gemini Flash（文档强 60% AnalystAgent + $0.75/$3.75），备：GPT-5.6 Terra（均衡 $2/$12，DeepSWE 69.6）
-    candidates.push({ fn: () => callGemini("gemini-3.7-flash", prompt, 800), model: "gemini-3.7-flash", engine: "gemini-generate" });
-    candidates.push({ fn: () => callOpenAI("gpt-5.6-terra", prompt, 800), model: "gpt-5.6-terra", engine: "openai-generate" });
-    candidates.push({ fn: () => callOpenAI("stealth/ox-alpha", prompt, 800), model: "stealth/ox-alpha", engine: "ox-alpha-generate" });
-    candidates.push({ fn: () => callOpenAI("nvidia/nemotron-3.5-lightning:free", prompt, 800), model: "nvidia/nemotron-3.5-lightning:free", engine: "nemotron-generate" });
-  } else if (role === "appeal") {
-    // 二封用更强的 Sol
-    candidates.push({ fn: () => callOpenAI("gpt-5.6-sol", prompt, 800), model: "gpt-5.6-sol", engine: "openai-appeal" });
-    candidates.push({ fn: () => callGemini("gemini-3.7-flash", prompt, 800), model: "gemini-3.7-flash", engine: "gemini-appeal" });
+  for (const model of CHAIN[role]) {
+    const text = await callOpenAI(model, [{ role: "user", content: prompt }], MAX_TOKENS[role]);
+    if (text && text.trim().length > 50) {
+      return { text: text.trim(), model, engine: model };
+    }
   }
+  return null;
+}
 
-  for (const c of candidates) {
-    const text = await c.fn();
-    if (text && text.trim().length > 50) return { text: text.trim(), model: c.model, engine: c.engine };
-  }
+// Vision：图片(base64) + 提示词 → Luna
+export async function llmVision(base64: string, mime: string, prompt: string, maxTokens = 500): Promise<LLMResult | null> {
+  const text = await callOpenAI("gpt-5.6-luna", [
+    {
+      role: "user",
+      content: [
+        { type: "text", text: prompt },
+        { type: "image_url", image_url: { url: `data:${mime};base64,${base64}`, detail: "auto" } },
+      ],
+    },
+  ], maxTokens, 20000);
+  if (text && text.trim().length > 5) return { text: text.trim(), model: "gpt-5.6-luna", engine: "gpt-5.6-luna-vision" };
   return null;
 }

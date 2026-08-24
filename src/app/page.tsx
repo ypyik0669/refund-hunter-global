@@ -17,7 +17,7 @@ export default function Home() {
         <div className="grid lg:grid-cols-2 gap-8 items-start">
           <div>
             <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300 px-3 py-1 rounded-full text-xs font-semibold">
-              <span className="h-2 w-2 bg-emerald-500 rounded-full animate-pulse" /> GLOBAL • FREE TO CHECK • 15% ONLY IF YOU WIN
+              <span className="h-2 w-2 bg-emerald-500 rounded-full animate-pulse" /> GLOBAL • FREE TO CHECK • $0.99 TO WIN
             </div>
             <h1 className="mt-4 text-4xl sm:text-5xl font-black leading-tight tracking-tight text-zinc-900 dark:text-white">
               Drop any receipt.<br />
@@ -39,8 +39,8 @@ export default function Home() {
                 <div className="text-xs text-zinc-500">Duplicate success</div>
               </div>
               <div className="bg-white dark:bg-zinc-900 rounded-xl border p-3">
-                <div className="text-xl font-black">15%</div>
-                <div className="text-xs text-zinc-500">Only if you win</div>
+                <div className="text-xl font-black">$0.99</div>
+                <div className="text-xs text-zinc-500">Unlock follow-ups</div>
               </div>
               <div className="bg-white dark:bg-zinc-900 rounded-xl border p-3">
                 <div className="text-xl font-black">7 days</div>
@@ -85,7 +85,7 @@ export default function Home() {
           <div className="bg-white dark:bg-zinc-900 rounded-2xl border p-5">
             <div className="h-8 w-8 rounded-lg bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 flex items-center justify-center font-bold">3</div>
             <h3 className="mt-3 font-semibold">Copy & send</h3>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-1">We generate email + chat scripts (EN + your language). You send. We take 15% only if you win.</p>
+            <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-1">First email free. Merchant says no? Unlock the 3-step follow-up sequence for $0.99 — most refunds are won on follow-up, not the first email.</p>
           </div>
         </div>
         <div className="mt-6 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl p-4 text-sm">
