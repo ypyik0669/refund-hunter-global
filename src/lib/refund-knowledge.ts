@@ -45,7 +45,7 @@ export function getAllPolicies(): Policy[] {
   return list;
 }
 
-export const POLICY_TTL_DAYS = 7; // 缓存7天后视为过期，活验证
+export const POLICY_TTL_DAYS = 3; // 缓存3天后视为过期，活验证 — 退款取消3天内发现
 
 export function isStale(policy: Policy, ttlDays = POLICY_TTL_DAYS): boolean {
   const crawled = new Date(policy.crawled_at).getTime();
